@@ -16,6 +16,7 @@
 		AB60683F264B3007000EF7FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB60683D264B3007000EF7FD /* LaunchScreen.storyboard */; };
 		AB60684A264B3007000EF7FD /* PatternsGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606849264B3007000EF7FD /* PatternsGameTests.swift */; };
 		AB606855264B3007000EF7FD /* PatternsGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606854264B3007000EF7FD /* PatternsGameUITests.swift */; };
+		AB606863264B324B000EF7FD /* ButtonsDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606862264B324B000EF7FD /* ButtonsDesign.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		AB606850264B3007000EF7FD /* PatternsGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PatternsGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB606854264B3007000EF7FD /* PatternsGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsGameUITests.swift; sourceTree = "<group>"; };
 		AB606856264B3007000EF7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB606862264B324B000EF7FD /* ButtonsDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsDesign.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				AB606831264B3003000EF7FD /* SceneDelegate.swift */,
 				AB606833264B3003000EF7FD /* ViewController.swift */,
 				AB606835264B3003000EF7FD /* Main.storyboard */,
+				AB606862264B324B000EF7FD /* ButtonsDesign.swift */,
 				AB60683B264B3006000EF7FD /* Assets.xcassets */,
 				AB60683D264B3007000EF7FD /* LaunchScreen.storyboard */,
 				AB606840264B3007000EF7FD /* Info.plist */,
@@ -264,6 +267,7 @@
 				AB60683A264B3003000EF7FD /* PatternsGame.xcdatamodeld in Sources */,
 				AB606834264B3003000EF7FD /* ViewController.swift in Sources */,
 				AB606830264B3003000EF7FD /* AppDelegate.swift in Sources */,
+				AB606863264B324B000EF7FD /* ButtonsDesign.swift in Sources */,
 				AB606832264B3003000EF7FD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
