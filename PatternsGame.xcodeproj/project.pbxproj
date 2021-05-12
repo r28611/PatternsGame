@@ -17,6 +17,7 @@
 		AB60684A264B3007000EF7FD /* PatternsGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606849264B3007000EF7FD /* PatternsGameTests.swift */; };
 		AB606855264B3007000EF7FD /* PatternsGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606854264B3007000EF7FD /* PatternsGameUITests.swift */; };
 		AB606863264B324B000EF7FD /* ButtonsDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606862264B324B000EF7FD /* ButtonsDesign.swift */; };
+		AB606866264BCF1E000EF7FD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606865264BCF1E000EF7FD /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		AB606854264B3007000EF7FD /* PatternsGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsGameUITests.swift; sourceTree = "<group>"; };
 		AB606856264B3007000EF7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB606862264B324B000EF7FD /* ButtonsDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsDesign.swift; sourceTree = "<group>"; };
+		AB606865264BCF1E000EF7FD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		AB60682E264B3003000EF7FD /* PatternsGame */ = {
 			isa = PBXGroup;
 			children = (
+				AB606864264BCF0B000EF7FD /* Model */,
 				AB60682F264B3003000EF7FD /* AppDelegate.swift */,
 				AB606831264B3003000EF7FD /* SceneDelegate.swift */,
 				AB606833264B3003000EF7FD /* ViewController.swift */,
@@ -132,6 +135,14 @@
 				AB606856264B3007000EF7FD /* Info.plist */,
 			);
 			path = PatternsGameUITests;
+			sourceTree = "<group>";
+		};
+		AB606864264BCF0B000EF7FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB606865264BCF1E000EF7FD /* Question.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +278,7 @@
 				AB60683A264B3003000EF7FD /* PatternsGame.xcdatamodeld in Sources */,
 				AB606834264B3003000EF7FD /* ViewController.swift in Sources */,
 				AB606830264B3003000EF7FD /* AppDelegate.swift in Sources */,
+				AB606866264BCF1E000EF7FD /* Question.swift in Sources */,
 				AB606863264B324B000EF7FD /* ButtonsDesign.swift in Sources */,
 				AB606832264B3003000EF7FD /* SceneDelegate.swift in Sources */,
 			);
