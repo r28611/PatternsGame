@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="139" y="105"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="isI-rN-FsH">
             <objects>
-                <viewController id="hZD-So-5A6" sceneMemberID="viewController">
+                <viewController id="hZD-So-5A6" customClass="GameViewController" customModule="PatternsGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nfs-8G-FoM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,6 +79,9 @@
                                     <constraint firstAttribute="height" constant="50" id="m5x-wn-rjC"/>
                                 </constraints>
                                 <state key="normal" title="D"/>
+                                <connections>
+                                    <action selector="userChooseAnswer:" destination="hZD-So-5A6" eventType="touchUpInside" id="zKL-mg-OyZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9C-95-1ye" customClass="AnswerButton" customModule="PatternsGame" customModuleProvider="target">
                                 <rect key="frame" x="32" y="714" width="350" height="50"/>
@@ -86,6 +89,9 @@
                                     <constraint firstAttribute="height" constant="50" id="Wry-pB-FbS"/>
                                 </constraints>
                                 <state key="normal" title="C"/>
+                                <connections>
+                                    <action selector="userChooseAnswer:" destination="hZD-So-5A6" eventType="touchUpInside" id="fMj-M0-F7d"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNI-vX-Lkl" customClass="AnswerButton" customModule="PatternsGame" customModuleProvider="target">
                                 <rect key="frame" x="32" y="648" width="350" height="50"/>
@@ -93,6 +99,9 @@
                                     <constraint firstAttribute="height" constant="50" id="yjN-YT-EaX"/>
                                 </constraints>
                                 <state key="normal" title="B"/>
+                                <connections>
+                                    <action selector="userChooseAnswer:" destination="hZD-So-5A6" eventType="touchUpInside" id="zEe-Ia-Wcm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHr-o2-BKe" customClass="AnswerButton" customModule="PatternsGame" customModuleProvider="target">
                                 <rect key="frame" x="32" y="582" width="350" height="50"/>
@@ -100,6 +109,9 @@
                                     <constraint firstAttribute="height" constant="50" id="2ux-Iy-4ga"/>
                                 </constraints>
                                 <state key="normal" title="A"/>
+                                <connections>
+                                    <action selector="userChooseAnswer:" destination="hZD-So-5A6" eventType="touchUpInside" id="ra2-uG-9FK"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dU1-Xc-gMi">
                                 <rect key="frame" x="32" y="516" width="350" height="50"/>
@@ -151,6 +163,13 @@
                             <constraint firstItem="f9C-95-1ye" firstAttribute="top" secondItem="WNI-vX-Lkl" secondAttribute="bottom" constant="16" id="yLU-91-flv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerA" destination="GHr-o2-BKe" id="4jz-9i-Ixm"/>
+                        <outlet property="answerB" destination="WNI-vX-Lkl" id="GW9-cS-P0s"/>
+                        <outlet property="answerC" destination="f9C-95-1ye" id="TUS-L6-wI0"/>
+                        <outlet property="answerD" destination="Ksr-SV-epW" id="F3s-tj-AJo"/>
+                        <outlet property="questionLabel" destination="aIF-6N-Ah8" id="dyT-cd-Z93"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFt-Q4-okp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

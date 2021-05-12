@@ -11,6 +11,10 @@ struct Question {
     let question: String
     let answerOptions: [String]
     let rightAnswer: Int
+    
+    func checkAnswer(userAnswer: String) -> Bool {
+        return userAnswer == answerOptions[rightAnswer]
+    }
 }
 
 final class QuestionFactory {
@@ -35,7 +39,7 @@ final class QuestionFactory {
             Question(
                 question: "A person who is not a banker and lends money at an extremely high interest rate is known as what?",
                 answerOptions: ["Paper tiger", "Green snake", "Loan shark", "Brother-in-law"],
-                rightAnswer: 0)
+                rightAnswer: 2)
         ]
         return array
     }
