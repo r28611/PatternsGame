@@ -41,6 +41,9 @@
                                 <state key="normal" title="Results">
                                     <color key="titleColor" red="0.58039215690000001" green="0.54901960780000003" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="nZm-qQ-L5z" kind="presentation" modalPresentationStyle="fullScreen" id="AUI-Vo-qde"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -58,6 +61,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="105"/>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="hCK-Ah-QTH">
+            <objects>
+                <viewController id="nZm-qQ-L5z" customClass="ResultsViewController" customModule="PatternsGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rYP-jO-PqK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="5zR-6d-lmi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pww-g6-AhN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="554"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="isI-rN-FsH">
@@ -173,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFt-Q4-okp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="104"/>
+            <point key="canvasLocation" x="1048" y="-138"/>
         </scene>
     </scenes>
     <resources>

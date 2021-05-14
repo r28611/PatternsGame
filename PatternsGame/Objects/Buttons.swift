@@ -1,5 +1,5 @@
 //
-//  ButtonsDesign.swift
+//  Buttons.swift
 //  PatternsGame
 //
 //  Created by Margarita Novokhatskaia on 11.05.2021.
