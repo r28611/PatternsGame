@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Game {
+final class Game {
 
     static let shared = Game()
 
@@ -16,4 +16,12 @@ class Game {
     var gameSession: GameSession?
     
     var results = [GameSession]()
+    
+    func addResult(_ result: GameSession) {
+        self.results.append(result)
+    }
+    
+    func clearResults() {
+        self.results = []
+    }
 }

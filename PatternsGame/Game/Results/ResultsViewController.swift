@@ -11,28 +11,38 @@ class ResultsViewController: UIViewController {
 
     lazy var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.description())
+        tableView.register(ResultsCell.self, forCellReuseIdentifier: ResultsCell.description())
+        tableView.delegate = self
         tableView.dataSource = self
         return tableView
     }()
 
     override func loadView() {
         view = tableView
+        tableView.separatorStyle = .none
     }
 }
 
-extension ResultsViewController: UITableViewDataSource {
+extension ResultsViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.description()) else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ResultsCell.description()) as? ResultsCell else {
             return UITableViewCell()
         }
-//        cell.textLabel?.text = String(Game.shared.records[indexPath.row].score)
+        if indexPath.row == 0 {
+            cell.scoreLabel.text = "✅"
+            cell.scoreLabel.layer.borderColor = UIColor.white.cgColor
+            return cell
+        }
+        cell.scoreLabel.text = String(Game.shared.results[indexPath.row - 1].score) + "/" + String(Game.shared.results[indexPath.row - 1].questionCount)
         return cell
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-//        Game.shared.records.count
+        Game.shared.results.count + 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 56
     }
 }

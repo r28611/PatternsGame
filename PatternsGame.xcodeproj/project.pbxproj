@@ -22,6 +22,8 @@
 		AB60686A264C7309000EF7FD /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606869264C7309000EF7FD /* GameSession.swift */; };
 		AB606871264EA648000EF7FD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606870264EA648000EF7FD /* Game.swift */; };
 		AB606873264EB7DD000EF7FD /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606872264EB7DD000EF7FD /* ResultsViewController.swift */; };
+		AB606875264EBA22000EF7FD /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606874264EBA22000EF7FD /* Labels.swift */; };
+		AB606877264EBB9D000EF7FD /* ResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606876264EBB9D000EF7FD /* ResultsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		AB606869264C7309000EF7FD /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		AB606870264EA648000EF7FD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		AB606872264EB7DD000EF7FD /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		AB606874264EBA22000EF7FD /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
+		AB606876264EBB9D000EF7FD /* ResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				AB606862264B324B000EF7FD /* Buttons.swift */,
+				AB606874264EBA22000EF7FD /* Labels.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				AB606872264EB7DD000EF7FD /* ResultsViewController.swift */,
+				AB606876264EBB9D000EF7FD /* ResultsCell.swift */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 			files = (
 				AB606868264C4E7C000EF7FD /* GameViewController.swift in Sources */,
 				AB606871264EA648000EF7FD /* Game.swift in Sources */,
+				AB606877264EBB9D000EF7FD /* ResultsCell.swift in Sources */,
 				AB60683A264B3003000EF7FD /* PatternsGame.xcdatamodeld in Sources */,
 				AB606873264EB7DD000EF7FD /* ResultsViewController.swift in Sources */,
 				AB60686A264C7309000EF7FD /* GameSession.swift in Sources */,
@@ -337,6 +344,7 @@
 				AB606866264BCF1E000EF7FD /* Question.swift in Sources */,
 				AB606863264B324B000EF7FD /* Buttons.swift in Sources */,
 				AB606832264B3003000EF7FD /* SceneDelegate.swift in Sources */,
+				AB606875264EBA22000EF7FD /* Labels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

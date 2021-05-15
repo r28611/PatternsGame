@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o1C-m3-FKM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgg-g9-8nP" customClass="AnswerButton" customModule="PatternsGame" customModuleProvider="target">
-                                <rect key="frame" x="32" y="294" width="350" height="50"/>
+                                <rect key="frame" x="32" y="338" width="350" height="50"/>
                                 <color key="backgroundColor" red="0.58039215690000001" green="0.54901960780000003" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="xuC-a4-VoB"/>
@@ -28,11 +28,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hZD-So-5A6" kind="presentation" modalPresentationStyle="fullScreen" id="feK-ax-nGR"/>
+                                    <segue destination="hZD-So-5A6" kind="show" id="feK-ax-nGR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssB-be-QlJ" customClass="AdditionalButton" customModule="PatternsGame" customModuleProvider="target">
-                                <rect key="frame" x="32" y="444" width="350" height="50"/>
+                                <rect key="frame" x="32" y="488" width="350" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="TAr-vt-b3b"/>
@@ -42,7 +42,7 @@
                                     <color key="titleColor" red="0.58039215690000001" green="0.54901960780000003" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="nZm-qQ-L5z" kind="presentation" modalPresentationStyle="fullScreen" id="AUI-Vo-qde"/>
+                                    <segue destination="nZm-qQ-L5z" kind="show" id="AUI-Vo-qde"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -57,10 +57,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ssB-be-QlJ" secondAttribute="trailing" constant="32" id="od0-pt-YFz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="01O-Fn-f0Y"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="105"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="104.46428571428571"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="hCK-Ah-QTH">
@@ -72,10 +73,11 @@
                         <viewLayoutGuide key="safeArea" id="5zR-6d-lmi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="awv-5P-b43"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pww-g6-AhN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="554"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="553.79464285714278"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="isI-rN-FsH">
@@ -85,8 +87,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIF-6N-Ah8">
-                                <rect key="frame" x="32" y="76" width="350" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIF-6N-Ah8" customClass="QuestionLabel" customModule="PatternsGame" customModuleProvider="target">
+                                <rect key="frame" x="32" y="120" width="350" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -181,6 +183,7 @@
                             <constraint firstItem="f9C-95-1ye" firstAttribute="top" secondItem="WNI-vX-Lkl" secondAttribute="bottom" constant="16" id="yLU-91-flv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="azM-CB-gwq"/>
                     <connections>
                         <outlet property="answerA" destination="GHr-o2-BKe" id="4jz-9i-Ixm"/>
                         <outlet property="answerB" destination="WNI-vX-Lkl" id="GW9-cS-P0s"/>
@@ -191,7 +194,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFt-Q4-okp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="-138"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="-138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hh8-Nb-Ca8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o1C-m3-FKM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="po3-Xk-9fk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ojD-nK-n5S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYI-p7-ZpI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="104.46428571428571"/>
         </scene>
     </scenes>
     <resources>
