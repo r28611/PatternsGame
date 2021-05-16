@@ -24,6 +24,7 @@
 		AB606873264EB7DD000EF7FD /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606872264EB7DD000EF7FD /* ResultsViewController.swift */; };
 		AB606875264EBA22000EF7FD /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606874264EBA22000EF7FD /* Labels.swift */; };
 		AB606877264EBB9D000EF7FD /* ResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606876264EBB9D000EF7FD /* ResultsCell.swift */; };
+		AB606879264FC63D000EF7FD /* HintsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606878264FC63D000EF7FD /* HintsControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		AB606872264EB7DD000EF7FD /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		AB606874264EBA22000EF7FD /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		AB606876264EBB9D000EF7FD /* ResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCell.swift; sourceTree = "<group>"; };
+		AB606878264FC63D000EF7FD /* HintsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HintsControl.swift; path = PatternsGame/Objects/HintsControl.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 		AB60686C264EA37E000EF7FD /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				AB606878264FC63D000EF7FD /* HintsControl.swift */,
 				AB606862264B324B000EF7FD /* Buttons.swift */,
 				AB606874264EBA22000EF7FD /* Labels.swift */,
 			);
@@ -340,6 +343,7 @@
 				AB606873264EB7DD000EF7FD /* ResultsViewController.swift in Sources */,
 				AB60686A264C7309000EF7FD /* GameSession.swift in Sources */,
 				AB606834264B3003000EF7FD /* MainViewController.swift in Sources */,
+				AB606879264FC63D000EF7FD /* HintsControl.swift in Sources */,
 				AB606830264B3003000EF7FD /* AppDelegate.swift in Sources */,
 				AB606866264BCF1E000EF7FD /* Question.swift in Sources */,
 				AB606863264B324B000EF7FD /* Buttons.swift in Sources */,

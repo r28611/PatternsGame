@@ -7,12 +7,7 @@
 
 import Foundation
 
-protocol GameDelegate: AnyObject {
-    func didEndGame(with score: Int, from questionCount: Int)
-}
-
 final class GameSession {
-    weak var gameDelegate: GameDelegate?
     
     var score: Int = 0
     var money: Int = 0
@@ -21,9 +16,19 @@ final class GameSession {
     var isCallFriendAvailable: Bool = true
     var isHallHelpAvailable: Bool = true
     
-    convenience init(score: Int, questionCount: Int) {
+    convenience init(questionCount: Int) {
         self.init()
-        self.score = score
         self.questionCount = questionCount
+    }
+}
+
+extension GameSession: GameDelegate {
+    func didSetMaxLevel(maxLevel: Int) {
+        self.questionCount = maxLevel
+    }
+    
+    func didNewLevel(with level: Int, money: Int) {
+        self.score = level
+        self.money = money
     }
 }

@@ -45,15 +45,25 @@
                                     <segue destination="nZm-qQ-L5z" kind="show" id="AUI-Vo-qde"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ji-K7-CtX" customClass="HintsControl" customModule="PatternsGame" customModuleProvider="target">
+                                <rect key="frame" x="32" y="155" width="350" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="na7-La-V2N"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Qgg-g9-8nP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="2hY-FJ-d6C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Ji-K7-CtX" secondAttribute="trailing" constant="32" id="2o9-V0-Aql"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qgg-g9-8nP" secondAttribute="trailing" constant="32" id="7n5-Yn-aee"/>
                             <constraint firstItem="ssB-be-QlJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="LvC-mO-qkf"/>
                             <constraint firstItem="ssB-be-QlJ" firstAttribute="top" secondItem="Qgg-g9-8nP" secondAttribute="bottom" constant="100" id="O3J-iF-yVQ"/>
                             <constraint firstItem="Qgg-g9-8nP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="Qkr-Rp-fjN"/>
+                            <constraint firstItem="2Ji-K7-CtX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="aMe-nj-lka"/>
+                            <constraint firstItem="2Ji-K7-CtX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="nMJ-jO-64d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ssB-be-QlJ" secondAttribute="trailing" constant="32" id="od0-pt-YFz"/>
                         </constraints>
                     </view>

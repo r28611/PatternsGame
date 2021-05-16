@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol GameDelegate: AnyObject {
+    func didSetMaxLevel(maxLevel: Int)
+    func didNewLevel(with level: Int, money: Int)
+}
+
 class GameViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
@@ -14,6 +19,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var answerB: AnswerButton!
     @IBOutlet weak var answerC: AnswerButton!
     @IBOutlet weak var answerD: AnswerButton!
+    
+    weak var gameDelegate: GameDelegate?
     private var currentGameSession = GameSession()
     private let questions = QuestionFactory.makeQuestions()
     private var currentQuestion: Question?
@@ -25,7 +32,8 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Game.shared.gameSession = self.currentGameSession
-        currentGameSession.gameDelegate = self
+        self.gameDelegate = self.currentGameSession
+        self.gameDelegate?.didSetMaxLevel(maxLevel: self.maxLevel)
         setQuestionAndAnswerOptions(level: self.level)
         questionLabel.numberOfLines = 0
     }
@@ -45,23 +53,28 @@ class GameViewController: UIViewController {
         self.answerD.setTitle(answers[3], for: .normal)
     }
     
+    private func EndGame() {
+        Game.shared.results.append(currentGameSession)
+        Game.shared.gameSession = nil
+        navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func userChooseAnswer(_ sender: AnswerButton) {
         guard let question = currentQuestion,
               let userAnswer = sender.title(for: .normal) else { return }
         
-        if question.checkAnswer(userAnswer: userAnswer) && level < maxLevel - 1 {
-            level += 1
+        guard question.checkAnswer(userAnswer: userAnswer) else {
+            EndGame()
+            return
+        }
+        
+        level += 1
+        self.gameDelegate?.didNewLevel(with: level, money: 0)
+        if level < maxLevel {
             setQuestionAndAnswerOptions(level: level)
         } else {
-            didEndGame(with: level + 1, from: maxLevel)
+            EndGame()
         }
-    }
-}
-
-extension GameViewController: GameDelegate {
-    func didEndGame(with score: Int, from questionCount: Int) {
-        navigationController?.popViewController(animated: true)
-        Game.shared.results.append(GameSession(score: score, questionCount: questionCount))
-        Game.shared.gameSession = nil
+        
     }
 }
