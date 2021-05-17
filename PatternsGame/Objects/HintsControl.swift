@@ -7,9 +7,19 @@
 
 import UIKit
 
+enum Hints {
+    case Fifty, Hall, Call
+}
+
 class HintsControl: UIControl {
-    private var buttons: [UIButton] = []
     private var stackView: UIStackView!
+    private var isFiftyActive: Bool = true
+    private var isHallActive: Bool = true
+    private var isCallActive: Bool = true
+    private var fiftyButton = AdditionalButton()
+    private var hallButton = AdditionalButton()
+    private var callButton = AdditionalButton()
+    var selectedHint: Hints?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,40 +32,50 @@ class HintsControl: UIControl {
     }
     
     private func commonInit() {
-        stackView = UIStackView(arrangedSubviews: [setFiftyFiftyButton(),
-                                                   setCallFriendButton(),
-                                                   setHallHelpButton()])
+        setFiftyFiftyButton(frame: bounds)
+        setCallFriendButton(frame: bounds)
+        setHallHelpButton(frame: bounds)
+        stackView = UIStackView(arrangedSubviews: [fiftyButton, hallButton, callButton])
         stackView.frame = bounds
-        addSubview(stackView)
-        
         stackView.axis = .horizontal
         stackView.spacing = 16
-        stackView.alignment = .center
+        stackView.alignment = .fill
         stackView.distribution = .fillEqually
-        stackView.contentMode = .scaleToFill
-
+        addSubview(stackView)
     }
     
-    private func setFiftyFiftyButton() -> UIButton {
-        let button = AdditionalButton()
-        button.setImage(UIImage(named: "phone.fill"), for: .normal)
-        button.addTarget(self, action: #selector(activateHint), for: .touchUpInside)
-        return button
+    private func setFiftyFiftyButton(frame: CGRect) {
+        fiftyButton = AdditionalButton(frame: frame)
+        fiftyButton.setImage(UIImage(systemName: "phone.fill"), for: .normal)
+        fiftyButton.addTarget(self, action: #selector(activateFifty), for: .touchUpInside)
     }
-    private func setCallFriendButton() -> UIButton {
-        let button = AdditionalButton()
-        button.setImage(UIImage(named: "person.3.fill"), for: .normal)
-        button.addTarget(self, action: #selector(activateHint), for: .touchUpInside)
-        return button
+    private func setCallFriendButton(frame: CGRect) {
+        hallButton = AdditionalButton(frame: frame)
+        hallButton.setImage(UIImage(systemName: "person.3.fill"), for: .normal)
+        hallButton.addTarget(self, action: #selector(activateHall), for: .touchUpInside)
     }
-    private func setHallHelpButton() -> UIButton {
-        let button = AdditionalButton()
-        button.setImage(UIImage(named: "lightbulb.fill"), for: .normal)
-        button.addTarget(self, action: #selector(activateHint), for: .touchUpInside)
-        return button
+    private func setHallHelpButton(frame: CGRect) {
+        callButton = AdditionalButton(frame: frame)
+        callButton.setImage(UIImage(systemName: "lightbulb.fill"), for: .normal)
+        callButton.addTarget(self, action: #selector(activateCall), for: .touchUpInside)
     }
     
-    @objc func activateHint() {
-        
+    @objc func activateFifty() {
+        self.selectedHint = .Fifty
+        self.isFiftyActive = false
+        self.fiftyButton.setImage(UIImage(systemName: "nosign"), for: .normal)
     }
+    
+    @objc func activateHall() {
+        self.selectedHint = .Hall
+        self.isHallActive = false
+        self.hallButton.setImage(UIImage(systemName: "nosign"), for: .normal)
+    }
+    
+    @objc func activateCall() {
+        self.selectedHint = .Call
+        self.isCallActive = false
+        self.callButton.setImage(UIImage(systemName: "nosign"), for: .normal)
+    }
+    
 }

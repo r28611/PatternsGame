@@ -47,5 +47,6 @@ class AdditionalButton: UIButton {
         self.setTitleColor(#colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1), for: .selected)
         self.titleLabel?.font = UIFont(name: "Chalkduster", size: 20)
         self.tintColor = #colorLiteral(red: 0.5796732306, green: 0.5393779278, blue: 0.9125451446, alpha: 1)
+        
     }
 }
