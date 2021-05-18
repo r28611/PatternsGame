@@ -84,6 +84,7 @@ class GameViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    //не работает - надо пофиксить контрол
     @IBAction func didSelectedHint(_ sender: HintsControl) {
         if let hint = sender.selectedHint {
             switch hint {
