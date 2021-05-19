@@ -41,7 +41,7 @@
                                     <color key="titleColor" red="0.58039215690000001" green="0.54901960780000003" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="nZm-qQ-L5z" kind="show" id="AUI-Vo-qde"/>
+                                    <action selector="didTapResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S4R-M3-Dgt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,22 +61,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="104.46428571428571"/>
-        </scene>
-        <!--Results View Controller-->
-        <scene sceneID="hCK-Ah-QTH">
-            <objects>
-                <viewController id="nZm-qQ-L5z" customClass="ResultsViewController" customModule="PatternsGame" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rYP-jO-PqK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="5zR-6d-lmi"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="awv-5P-b43"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pww-g6-AhN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1957.9710144927537" y="553.79464285714278"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="isI-rN-FsH">
@@ -177,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFt-Q4-okp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957.9710144927537" y="-138.61607142857142"/>
+            <point key="canvasLocation" x="1964" y="104"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hh8-Nb-Ca8">
