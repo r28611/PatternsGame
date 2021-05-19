@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "GameViewController.maxLevel.getter:GameViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "GameViewController.userChooseAnswer(_:):GameViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "level">
+            </PersistentString>
+            <PersistentString
+               value = "maxLevel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GameViewController.level.getter:GameViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

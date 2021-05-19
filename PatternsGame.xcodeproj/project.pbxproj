@@ -7,16 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB5443732655290700F6CC6C /* + UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5443722655290700F6CC6C /* + UIColor.swift */; };
 		AB606830264B3003000EF7FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB60682F264B3003000EF7FD /* AppDelegate.swift */; };
 		AB606832264B3003000EF7FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606831264B3003000EF7FD /* SceneDelegate.swift */; };
-		AB606834264B3003000EF7FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606833264B3003000EF7FD /* ViewController.swift */; };
+		AB606834264B3003000EF7FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606833264B3003000EF7FD /* MainViewController.swift */; };
 		AB606837264B3003000EF7FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB606835264B3003000EF7FD /* Main.storyboard */; };
 		AB60683A264B3003000EF7FD /* PatternsGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB606838264B3003000EF7FD /* PatternsGame.xcdatamodeld */; };
 		AB60683C264B3006000EF7FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB60683B264B3006000EF7FD /* Assets.xcassets */; };
 		AB60683F264B3007000EF7FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB60683D264B3007000EF7FD /* LaunchScreen.storyboard */; };
 		AB60684A264B3007000EF7FD /* PatternsGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606849264B3007000EF7FD /* PatternsGameTests.swift */; };
 		AB606855264B3007000EF7FD /* PatternsGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606854264B3007000EF7FD /* PatternsGameUITests.swift */; };
-		AB606863264B324B000EF7FD /* ButtonsDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606862264B324B000EF7FD /* ButtonsDesign.swift */; };
+		AB606863264B324B000EF7FD /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606862264B324B000EF7FD /* Buttons.swift */; };
+		AB606866264BCF1E000EF7FD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606865264BCF1E000EF7FD /* Question.swift */; };
+		AB606868264C4E7C000EF7FD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606867264C4E7C000EF7FD /* GameViewController.swift */; };
+		AB60686A264C7309000EF7FD /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606869264C7309000EF7FD /* GameSession.swift */; };
+		AB606871264EA648000EF7FD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606870264EA648000EF7FD /* Game.swift */; };
+		AB606873264EB7DD000EF7FD /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606872264EB7DD000EF7FD /* ResultsViewController.swift */; };
+		AB606875264EBA22000EF7FD /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606874264EBA22000EF7FD /* Labels.swift */; };
+		AB606877264EBB9D000EF7FD /* ResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606876264EBB9D000EF7FD /* ResultsCell.swift */; };
+		AB606879264FC63D000EF7FD /* HintsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606878264FC63D000EF7FD /* HintsControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB5443722655290700F6CC6C /* + UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+ UIColor.swift"; sourceTree = "<group>"; };
 		AB60682C264B3003000EF7FD /* PatternsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB60682F264B3003000EF7FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB606831264B3003000EF7FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB606833264B3003000EF7FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB606833264B3003000EF7FD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AB606836264B3003000EF7FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB606839264B3003000EF7FD /* PatternsGame.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PatternsGame.xcdatamodel; sourceTree = "<group>"; };
 		AB60683B264B3006000EF7FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,7 +62,15 @@
 		AB606850264B3007000EF7FD /* PatternsGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PatternsGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB606854264B3007000EF7FD /* PatternsGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsGameUITests.swift; sourceTree = "<group>"; };
 		AB606856264B3007000EF7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB606862264B324B000EF7FD /* ButtonsDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsDesign.swift; sourceTree = "<group>"; };
+		AB606862264B324B000EF7FD /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		AB606865264BCF1E000EF7FD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		AB606867264C4E7C000EF7FD /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		AB606869264C7309000EF7FD /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
+		AB606870264EA648000EF7FD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		AB606872264EB7DD000EF7FD /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		AB606874264EBA22000EF7FD /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
+		AB606876264EBB9D000EF7FD /* ResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCell.swift; sourceTree = "<group>"; };
+		AB606878264FC63D000EF7FD /* HintsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HintsControl.swift; path = PatternsGame/Objects/HintsControl.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +121,13 @@
 		AB60682E264B3003000EF7FD /* PatternsGame */ = {
 			isa = PBXGroup;
 			children = (
-				AB60682F264B3003000EF7FD /* AppDelegate.swift */,
-				AB606831264B3003000EF7FD /* SceneDelegate.swift */,
-				AB606833264B3003000EF7FD /* ViewController.swift */,
-				AB606835264B3003000EF7FD /* Main.storyboard */,
-				AB606862264B324B000EF7FD /* ButtonsDesign.swift */,
-				AB60683B264B3006000EF7FD /* Assets.xcassets */,
-				AB60683D264B3007000EF7FD /* LaunchScreen.storyboard */,
 				AB606840264B3007000EF7FD /* Info.plist */,
-				AB606838264B3003000EF7FD /* PatternsGame.xcdatamodeld */,
+				AB60686D264EA424000EF7FD /* Game */,
+				AB60686C264EA37E000EF7FD /* Objects */,
+				AB60686B264EA359000EF7FD /* Fundamental */,
+				AB606864264BCF0B000EF7FD /* Model */,
+				AB60683B264B3006000EF7FD /* Assets.xcassets */,
+				AB5443722655290700F6CC6C /* + UIColor.swift */,
 			);
 			path = PatternsGame;
 			sourceTree = "<group>";
@@ -132,6 +148,65 @@
 				AB606856264B3007000EF7FD /* Info.plist */,
 			);
 			path = PatternsGameUITests;
+			sourceTree = "<group>";
+		};
+		AB606864264BCF0B000EF7FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB606865264BCF1E000EF7FD /* Question.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AB60686B264EA359000EF7FD /* Fundamental */ = {
+			isa = PBXGroup;
+			children = (
+				AB606831264B3003000EF7FD /* SceneDelegate.swift */,
+				AB60683D264B3007000EF7FD /* LaunchScreen.storyboard */,
+				AB606838264B3003000EF7FD /* PatternsGame.xcdatamodeld */,
+				AB60682F264B3003000EF7FD /* AppDelegate.swift */,
+			);
+			path = Fundamental;
+			sourceTree = "<group>";
+		};
+		AB60686C264EA37E000EF7FD /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				AB606878264FC63D000EF7FD /* HintsControl.swift */,
+				AB606862264B324B000EF7FD /* Buttons.swift */,
+				AB606874264EBA22000EF7FD /* Labels.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		AB60686D264EA424000EF7FD /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				AB606835264B3003000EF7FD /* Main.storyboard */,
+				AB606867264C4E7C000EF7FD /* GameViewController.swift */,
+				AB606869264C7309000EF7FD /* GameSession.swift */,
+				AB60686F264EA44B000EF7FD /* Results */,
+				AB60686E264EA433000EF7FD /* Main */,
+				AB606870264EA648000EF7FD /* Game.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		AB60686E264EA433000EF7FD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AB606833264B3003000EF7FD /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AB60686F264EA44B000EF7FD /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				AB606872264EB7DD000EF7FD /* ResultsViewController.swift */,
+				AB606876264EBB9D000EF7FD /* ResultsCell.swift */,
+			);
+			path = Results;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,11 +339,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB606868264C4E7C000EF7FD /* GameViewController.swift in Sources */,
+				AB606871264EA648000EF7FD /* Game.swift in Sources */,
+				AB606877264EBB9D000EF7FD /* ResultsCell.swift in Sources */,
 				AB60683A264B3003000EF7FD /* PatternsGame.xcdatamodeld in Sources */,
-				AB606834264B3003000EF7FD /* ViewController.swift in Sources */,
+				AB606873264EB7DD000EF7FD /* ResultsViewController.swift in Sources */,
+				AB60686A264C7309000EF7FD /* GameSession.swift in Sources */,
+				AB5443732655290700F6CC6C /* + UIColor.swift in Sources */,
+				AB606834264B3003000EF7FD /* MainViewController.swift in Sources */,
+				AB606879264FC63D000EF7FD /* HintsControl.swift in Sources */,
 				AB606830264B3003000EF7FD /* AppDelegate.swift in Sources */,
-				AB606863264B324B000EF7FD /* ButtonsDesign.swift in Sources */,
+				AB606866264BCF1E000EF7FD /* Question.swift in Sources */,
+				AB606863264B324B000EF7FD /* Buttons.swift in Sources */,
 				AB606832264B3003000EF7FD /* SceneDelegate.swift in Sources */,
+				AB606875264EBA22000EF7FD /* Labels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
