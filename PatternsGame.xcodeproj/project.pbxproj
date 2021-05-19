@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB5443732655290700F6CC6C /* + UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5443722655290700F6CC6C /* + UIColor.swift */; };
 		AB606830264B3003000EF7FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB60682F264B3003000EF7FD /* AppDelegate.swift */; };
 		AB606832264B3003000EF7FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606831264B3003000EF7FD /* SceneDelegate.swift */; };
 		AB606834264B3003000EF7FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606833264B3003000EF7FD /* MainViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB5443722655290700F6CC6C /* + UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+ UIColor.swift"; sourceTree = "<group>"; };
 		AB60682C264B3003000EF7FD /* PatternsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB60682F264B3003000EF7FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB606831264B3003000EF7FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				AB60686B264EA359000EF7FD /* Fundamental */,
 				AB606864264BCF0B000EF7FD /* Model */,
 				AB60683B264B3006000EF7FD /* Assets.xcassets */,
+				AB5443722655290700F6CC6C /* + UIColor.swift */,
 			);
 			path = PatternsGame;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				AB60683A264B3003000EF7FD /* PatternsGame.xcdatamodeld in Sources */,
 				AB606873264EB7DD000EF7FD /* ResultsViewController.swift in Sources */,
 				AB60686A264C7309000EF7FD /* GameSession.swift in Sources */,
+				AB5443732655290700F6CC6C /* + UIColor.swift in Sources */,
 				AB606834264B3003000EF7FD /* MainViewController.swift in Sources */,
 				AB606879264FC63D000EF7FD /* HintsControl.swift in Sources */,
 				AB606830264B3003000EF7FD /* AppDelegate.swift in Sources */,

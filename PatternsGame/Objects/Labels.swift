@@ -24,7 +24,7 @@ class QuestionLabel: UILabel {
         self.layer.cornerRadius = self.frame.height / 4
         self.clipsToBounds = true
         self.backgroundColor = UIColor.systemGray5
-        self.textColor = #colorLiteral(red: 0.5796732306, green: 0.5393779278, blue: 0.9125451446, alpha: 1)
+        self.textColor = UIColor.lightPurple
         self.font = UIFont(name: "Chalkduster", size: 16)
     }
     
@@ -63,7 +63,7 @@ class ScoreLabel: UILabel {
     func commonInit(){
         self.layer.cornerRadius = self.frame.height / 2
         self.clipsToBounds = true
-        self.textColor = #colorLiteral(red: 0.5796732306, green: 0.5393779278, blue: 0.9125451446, alpha: 1)
+        self.textColor = UIColor.lightPurple
         self.font = UIFont(name: "Chalkduster", size: 16)
         self.textAlignment = .center
         self.setProperties(borderWidth: 1.0, borderColor:UIColor.systemGray5)

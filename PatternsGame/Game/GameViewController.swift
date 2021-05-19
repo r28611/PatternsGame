@@ -31,10 +31,10 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Game.shared.gameSession = self.currentGameSession
-        self.gameDelegate = self.currentGameSession
-        self.gameDelegate?.didSetMaxLevel(maxLevel: self.maxLevel)
-        setQuestionAndAnswerOptions(level: self.level)
+        Game.shared.gameSession = currentGameSession
+        self.gameDelegate = currentGameSession
+        self.gameDelegate?.didSetMaxLevel(maxLevel: maxLevel)
+        setQuestionAndAnswerOptions(level: level)
         questionLabel.numberOfLines = 0
     }
     
@@ -47,13 +47,10 @@ class GameViewController: UIViewController {
         guard let question = currentQuestion else { return }
         questionLabel.text = question.question
         let answers = question.answerOptions
-        self.answerA.setTitle(answers[0], for: .normal)
-        self.answerB.setTitle(answers[1], for: .normal)
-        self.answerC.setTitle(answers[2], for: .normal)
-        self.answerD.setTitle(answers[3], for: .normal)
+        [answerA, answerB, answerC,answerD].enumerated().forEach { $0.element.setTitle(answers[$0.offset], for: .normal) }
     }
     
-    private func EndGame() {
+    private func endGame() {
         Game.shared.results.append(currentGameSession)
         Game.shared.gameSession = nil
         navigationController?.popViewController(animated: true)
@@ -103,16 +100,16 @@ class GameViewController: UIViewController {
               let userAnswer = sender.title(for: .normal) else { return }
         
         guard question.checkAnswer(userAnswer: userAnswer) else {
-            EndGame()
+            endGame()
             return
         }
         
         level += 1
-        self.gameDelegate?.didNewLevel(with: level, money: 0)
+        gameDelegate?.didNewLevel(with: level, money: 0)
         if level < maxLevel {
             setQuestionAndAnswerOptions(level: level)
         } else {
-            EndGame()
+            endGame()
         }
         
     }

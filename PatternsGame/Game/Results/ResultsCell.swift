@@ -21,7 +21,9 @@ class ResultsCell: UITableViewCell {
     }
     
     func commonInit() {
-        addSubview(scoreLabel)    }
+        addSubview(scoreLabel)
+        
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -29,11 +31,13 @@ class ResultsCell: UITableViewCell {
     }
     
     func layoutScoreLabel() {
-        scoreLabel.frame = CGRect(
-            x: 16,
-            y: 8,
-            width: 40,
-            height: 40)
+        scoreLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            scoreLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            scoreLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            scoreLabel.widthAnchor.constraint(equalToConstant: 40),
+            scoreLabel.heightAnchor.constraint(equalToConstant: 40)
+        ])
     }
     
 }

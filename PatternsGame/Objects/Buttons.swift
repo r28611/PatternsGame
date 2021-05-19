@@ -21,7 +21,7 @@ class AnswerButton: UIButton {
     
     private func commonInit() {
         self.layer.cornerRadius = self.layer.frame.height / 4
-        self.backgroundColor = #colorLiteral(red: 0.5796732306, green: 0.5393779278, blue: 0.9125451446, alpha: 1)
+        self.backgroundColor = UIColor.lightPurple
         self.setTitleColor(UIColor.white, for: .normal)
         self.titleLabel?.font = UIFont(name: "Chalkduster", size: 24)
     }
@@ -43,10 +43,10 @@ class AdditionalButton: UIButton {
     private func commonInit() {
         self.layer.cornerRadius = self.layer.frame.height / 4
         self.backgroundColor = UIColor.systemGray5
-        self.setTitleColor(#colorLiteral(red: 0.5796732306, green: 0.5393779278, blue: 0.9125451446, alpha: 1), for: .normal)
-        self.setTitleColor(#colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1), for: .selected)
+        self.setTitleColor(UIColor.lightPurple, for: .normal)
+        self.setTitleColor(UIColor.darkGray, for: .selected)
         self.titleLabel?.font = UIFont(name: "Chalkduster", size: 20)
-        self.tintColor = #colorLiteral(red: 0.5796732306, green: 0.5393779278, blue: 0.9125451446, alpha: 1)
+        self.tintColor = UIColor.lightPurple
         
     }
 }
