@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="height" constant="50" id="xuC-a4-VoB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
-                                <state key="normal" title="New game">
+                                <state key="normal" title="Game">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>

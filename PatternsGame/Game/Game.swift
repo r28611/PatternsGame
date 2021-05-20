@@ -12,16 +12,16 @@ final class Game {
     static let shared = Game()
     
     private init() {
-        results = sessionCaretaker.retrieveSessions()
+//        results = sessionCaretaker.retrieveSessions()
     }
     
-    private let sessionCaretaker = SessionCaretaker()
     var gameSession: GameSession?
-    var results: [GameSession] {
-        didSet {
-            sessionCaretaker.saveGame(sessions: self.results)
-        }
-    }
+    var results = [GameSession]()
+//    {
+//        didSet {
+//            sessionCaretaker.saveGame(sessions: self.results)
+//        }
+//    }
     
     func addResult(_ result: GameSession) {
         self.results.append(result)

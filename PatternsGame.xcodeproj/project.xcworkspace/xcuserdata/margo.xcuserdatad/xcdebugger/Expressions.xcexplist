@@ -3,6 +3,17 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "GameViewController.viewWillAppear(_:):GameViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "level">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GameViewController.level.getter:GameViewController.swift">
+      </ContextState>
+      <ContextState
          contextName = "GameViewController.maxLevel.getter:GameViewController.swift">
       </ContextState>
       <ContextState
@@ -15,9 +26,6 @@
                value = "maxLevel">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "GameViewController.level.getter:GameViewController.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>
