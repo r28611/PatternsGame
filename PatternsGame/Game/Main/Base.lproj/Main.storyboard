@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgg-g9-8nP" customClass="AnswerButton" customModule="PatternsGame" customModuleProvider="target">
-                                <rect key="frame" x="32" y="338" width="311" height="50"/>
+                                <rect key="frame" x="32" y="337" width="311" height="50"/>
                                 <color key="backgroundColor" red="0.58039215690000001" green="0.54901960780000003" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="xuC-a4-VoB"/>
@@ -27,11 +27,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hZD-So-5A6" kind="show" id="feK-ax-nGR"/>
+                                    <action selector="didTapGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vxF-nn-IGJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssB-be-QlJ" customClass="AdditionalButton" customModule="PatternsGame" customModuleProvider="target">
-                                <rect key="frame" x="32" y="488" width="311" height="50"/>
+                                <rect key="frame" x="32" y="487" width="311" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="TAr-vt-b3b"/>
@@ -44,19 +44,31 @@
                                     <action selector="didTapResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S4R-M3-Dgt"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WRJ-0t-tT8">
+                                <rect key="frame" x="118" y="282" width="139" height="32"/>
+                                <segments>
+                                    <segment title="Normal"/>
+                                    <segment title="Random"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Qgg-g9-8nP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="2hY-FJ-d6C"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qgg-g9-8nP" secondAttribute="trailing" constant="32" id="7n5-Yn-aee"/>
+                            <constraint firstItem="WRJ-0t-tT8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="194" id="JLQ-wU-PXB"/>
                             <constraint firstItem="ssB-be-QlJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="LvC-mO-qkf"/>
                             <constraint firstItem="ssB-be-QlJ" firstAttribute="top" secondItem="Qgg-g9-8nP" secondAttribute="bottom" constant="100" id="O3J-iF-yVQ"/>
-                            <constraint firstItem="Qgg-g9-8nP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="Qkr-Rp-fjN"/>
+                            <constraint firstItem="WRJ-0t-tT8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qae-L2-Jjc"/>
+                            <constraint firstItem="Qgg-g9-8nP" firstAttribute="top" secondItem="WRJ-0t-tT8" secondAttribute="bottom" constant="24" id="iKi-SV-4md"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ssB-be-QlJ" secondAttribute="trailing" constant="32" id="od0-pt-YFz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="01O-Fn-f0Y"/>
+                    <connections>
+                        <outlet property="difficultyControl" destination="WRJ-0t-tT8" id="2AN-r6-vyy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,7 +83,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIF-6N-Ah8" customClass="QuestionLabel" customModule="PatternsGame" customModuleProvider="target">
-                                <rect key="frame" x="32" y="120" width="311" height="24"/>
+                                <rect key="frame" x="32" y="76" width="311" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

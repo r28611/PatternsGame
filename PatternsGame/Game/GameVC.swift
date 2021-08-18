@@ -20,10 +20,11 @@ class GameViewController: UIViewController {
     @IBOutlet weak var answerC: AnswerButton!
     @IBOutlet weak var answerD: AnswerButton!
     
+    var gameStrategy: GameStrategy?
     weak var gameDelegate: GameDelegate?
     private let gameCaretacer = GameCaretaker()
     private var currentGameSession = GameSession()
-    private let questions = QuestionFactory.makeQuestions()
+    private var questions = QuestionFactory.makeQuestions()
     private var currentQuestion: Question?
     private var level: Int = 0
     private var maxLevel: Int {
@@ -37,6 +38,7 @@ class GameViewController: UIViewController {
         Game.shared.gameSession = currentGameSession
         self.gameDelegate = currentGameSession
         self.gameDelegate?.didSetMaxLevel(maxLevel: maxLevel)
+        questions = gameStrategy?.defineQuestions(questions: questions) ?? questions
         questionLabel.numberOfLines = 0
     }
     
