@@ -25,7 +25,19 @@ class AnswerButton: UIButton {
         self.setTitleColor(UIColor.white, for: .normal)
         self.titleLabel?.font = UIFont(name: "Chalkduster", size: 24)
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.layer.cornerRadius = self.layer.frame.height / 4
+    }
 
+}
+
+func createAnswerButton(title: String) -> AnswerButton {
+    let button = AnswerButton()
+    button.setTitle(title, for: .normal)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
 }
 
 class AdditionalButton: UIButton {

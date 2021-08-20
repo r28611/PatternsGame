@@ -14,11 +14,28 @@ protocol GameDelegate: AnyObject {
 
 class GameViewController: UIViewController {
     
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var answerA: AnswerButton!
-    @IBOutlet weak var answerB: AnswerButton!
-    @IBOutlet weak var answerC: AnswerButton!
-    @IBOutlet weak var answerD: AnswerButton!
+    private var questionLabel: UILabel = {
+        let label = QuestionLabel()
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private var buttonA : UIButton = createAnswerButton(title: "A")
+    private var buttonB : UIButton = createAnswerButton(title: "B")
+    private var buttonC : UIButton = createAnswerButton(title: "C")
+    private var buttonD : UIButton = createAnswerButton(title: "D")
+    
+    private var buttonsStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.alignment = .fill
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.spacing = 8.0
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
     
     var gameStrategy: GameStrategy?
     weak var gameDelegate: GameDelegate?
@@ -33,13 +50,38 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUi()
         gameCaretacer.game = self
         gameCaretacer.restoreState()
         Game.shared.gameSession = currentGameSession
         self.gameDelegate = currentGameSession
         self.gameDelegate?.didSetMaxLevel(maxLevel: maxLevel)
         questions = gameStrategy?.defineQuestions(questions: questions) ?? questions
-        questionLabel.numberOfLines = 0
+    }
+    
+    private func setupUi() {
+        view.backgroundColor = .white
+        view.addSubview(questionLabel)
+        view.addSubview(buttonsStackView)
+        [buttonA, buttonB, buttonC, buttonD].forEach { buttonsStackView.addArrangedSubview($0) }
+        setupConstraints()
+        [buttonA, buttonB, buttonC, buttonD].forEach { $0.setNeedsLayout() }
+        
+    }
+    
+    private func setupConstraints() {
+        let margins = view.layoutMarginsGuide
+        NSLayoutConstraint.activate([
+            questionLabel.topAnchor.constraint(equalTo: margins.topAnchor),
+            questionLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
+            questionLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
+            questionLabel.widthAnchor.constraint(equalTo: margins.widthAnchor),
+        
+            buttonsStackView.topAnchor.constraint(equalTo: margins.topAnchor, constant: 300),
+            buttonsStackView.bottomAnchor.constraint(equalTo: margins.bottomAnchor),
+            buttonsStackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
+            buttonsStackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
+        ])
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,11 +97,11 @@ class GameViewController: UIViewController {
     }
     
     private func setQuestionAndAnswerOptions(level: Int) {
-        currentQuestion = questions[level]
+        currentQuestion = questions[0] // Что-то не так работает, разобраться
         guard let question = currentQuestion else { return }
         questionLabel.text = question.question
         let answers = question.answerOptions
-        [answerA, answerB, answerC,answerD].enumerated().forEach { $0.element.setTitle(answers[$0.offset], for: .normal) }
+//        [answerA, answerB, answerC,answerD].enumerated().forEach { $0.element.setTitle(answers[$0.offset], for: .normal) }
     }
     
     private func endGame() {
@@ -131,11 +173,11 @@ class GameViewController: UIViewController {
 
 // 1. Originator
 extension GameViewController {
-
+    
     func save() -> GameState {
         return GameState(obtainedLevel: level)
     }
-
+    
     func restore(state: GameState?) {
         level = state?.obtainedLevel ?? 0
     }
@@ -160,10 +202,10 @@ class GameCaretaker {
     func saveGame() {
         do {
             let data = try self.encoder.encode(game?.save())
-             UserDefaults.standard.set(data, forKey: key)
-         } catch {
-             print(error)
-         }
+            UserDefaults.standard.set(data, forKey: key)
+        } catch {
+            print(error)
+        }
     }
     
     func restoreState() {
