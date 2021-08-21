@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB1C77B626CBD5CA0062155E /* GameStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C77B526CBD5CA0062155E /* GameStrategy.swift */; };
+		AB27C80726CFB7EE00AE5F72 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB27C80626CFB7EE00AE5F72 /* MenuVC.swift */; };
 		AB5443732655290700F6CC6C /* + UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5443722655290700F6CC6C /* + UIColor.swift */; };
 		AB606830264B3003000EF7FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB60682F264B3003000EF7FD /* AppDelegate.swift */; };
 		AB606832264B3003000EF7FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606831264B3003000EF7FD /* SceneDelegate.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		AB1C77B526CBD5CA0062155E /* GameStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStrategy.swift; sourceTree = "<group>"; };
+		AB27C80626CFB7EE00AE5F72 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		AB5443722655290700F6CC6C /* + UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+ UIColor.swift"; sourceTree = "<group>"; };
 		AB60682C264B3003000EF7FD /* PatternsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB60682F264B3003000EF7FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 				AB1C77B526CBD5CA0062155E /* GameStrategy.swift */,
 			);
 			path = GameStrategy;
+			sourceTree = "<group>";
+		};
+		AB27C80526CFB7DC00AE5F72 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				AB27C80626CFB7EE00AE5F72 /* MenuVC.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		AB606823264B3003000EF7FD = {
@@ -192,6 +202,7 @@
 		AB60686D264EA424000EF7FD /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				AB27C80526CFB7DC00AE5F72 /* Menu */,
 				AB1C77B426CBD58B0062155E /* GameStrategy */,
 				AB606867264C4E7C000EF7FD /* GameVC.swift */,
 				AB606870264EA648000EF7FD /* Game.swift */,
@@ -355,6 +366,7 @@
 				AB606877264EBB9D000EF7FD /* ResultsCell.swift in Sources */,
 				AB60683A264B3003000EF7FD /* PatternsGame.xcdatamodeld in Sources */,
 				AB606873264EB7DD000EF7FD /* ResultsViewController.swift in Sources */,
+				AB27C80726CFB7EE00AE5F72 /* MenuVC.swift in Sources */,
 				AB60686A264C7309000EF7FD /* GameSession.swift in Sources */,
 				AB5443732655290700F6CC6C /* + UIColor.swift in Sources */,
 				AB606834264B3003000EF7FD /* MainVC.swift in Sources */,

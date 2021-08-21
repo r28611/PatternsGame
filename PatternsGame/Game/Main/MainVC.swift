@@ -8,13 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    @IBOutlet weak var difficultyControl: UISegmentedControl!
-    
-    enum Mode: Int {
-        case normal
-        case random
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +20,14 @@ class ViewController: UIViewController {
     
     @IBAction func didTapGame(_ sender: UIButton) {
         let vc = GameViewController()
-        let mode = Mode(rawValue: difficultyControl.selectedSegmentIndex)
-        vc.gameStrategy = mode == .normal ? NormalStrategy() : RandomStrategy()
+//        let mode = Mode(rawValue: difficultyControl.selectedSegmentIndex)
+//        vc.gameStrategy = mode == .normal ? NormalStrategy() : RandomStrategy()
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func didTapMenu(_ sender: UIButton) {
+        let vc = MenuViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
