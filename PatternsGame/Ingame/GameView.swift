@@ -18,6 +18,12 @@ final class GameView: UIView {
         return label
     }()
     
+    private let hintsControl: UIView = {
+       let control = HintsControl()
+        control.translatesAutoresizingMaskIntoConstraints = false
+        return control
+    }()
+    
     private var buttonA : UIButton = createAnswerButton(title: "A")
     private var buttonB : UIButton = createAnswerButton(title: "B")
     private var buttonC : UIButton = createAnswerButton(title: "C")
@@ -33,9 +39,23 @@ final class GameView: UIView {
         return stackView
     }()
     
+    // MARK: - Initializers
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configureUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Private methods
+    
     private func configureUI() {
         backgroundColor = .white
         addSubview(questionLabel)
+        addSubview(hintsControl)
         addSubview(buttonsStackView)
         setupConstraints()
     }
@@ -47,22 +67,16 @@ final class GameView: UIView {
             questionLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
             questionLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
             questionLabel.widthAnchor.constraint(equalTo: margins.widthAnchor),
-        
-            buttonsStackView.topAnchor.constraint(equalTo: questionLabel.bottomAnchor, constant: 128),
+            
+            hintsControl.topAnchor.constraint(equalTo: questionLabel.bottomAnchor, constant: 48),
+            hintsControl.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
+            hintsControl.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
+            hintsControl.heightAnchor.constraint(equalToConstant: 58),
+
+            buttonsStackView.topAnchor.constraint(equalTo: hintsControl.bottomAnchor, constant: 48),
             buttonsStackView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: 8),
             buttonsStackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 8),
             buttonsStackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -8),
         ])
-    }
-    
-    // MARK: - Initializers
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        configureUI()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

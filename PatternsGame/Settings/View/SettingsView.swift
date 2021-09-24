@@ -9,7 +9,7 @@ import UIKit
 
 final class SettingsView: UIView {
     
-    private var selectedMode = Mode.regular
+    var selectedMode = Mode.regular
     
     private var modeControl : UISegmentedControl = {
         let control = UISegmentedControl(items: Mode.allCases.map { $0.rawValue })

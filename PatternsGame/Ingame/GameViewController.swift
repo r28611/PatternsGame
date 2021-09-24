@@ -31,7 +31,7 @@ class GameViewController: UIViewController {
         gameCaretacer.game = self
         gameCaretacer.restoreState()
         Game.shared.gameSession = currentGameSession
-        self.gameDelegate = currentGameSession
+        gameDelegate = currentGameSession
         questions = gameStrategy?.defineQuestions(questions: questions) ?? questions
     }
     
@@ -92,21 +92,7 @@ class GameViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    //не работает - надо пофиксить контрол
-    @IBAction func didSelectedHint(_ sender: HintsControl) {
-        if let hint = sender.selectedHint {
-            switch hint {
-            case .Fifty:
-                print()
-            case .Hall:
-                showHallHelp()
-            case .Call:
-                print("Call to your mom")
-            }
-        }
-    }
-    
-    @IBAction func userChooseAnswer(_ sender: AnswerButton) {
+    func userChooseAnswer(_ sender: AnswerButton) {
         guard let question = currentQuestion,
               let userAnswer = sender.title(for: .normal) else { return }
         

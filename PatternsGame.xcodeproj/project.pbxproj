@@ -77,7 +77,7 @@
 		AB606872264EB7DD000EF7FD /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		AB606874264EBA22000EF7FD /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		AB606876264EBB9D000EF7FD /* ResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCell.swift; sourceTree = "<group>"; };
-		AB606878264FC63D000EF7FD /* HintsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HintsControl.swift; path = PatternsGame/Objects/HintsControl.swift; sourceTree = SOURCE_ROOT; };
+		AB606878264FC63D000EF7FD /* HintsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HintsControl.swift; path = PatternsGame/Ingame/Hints/HintsControl.swift; sourceTree = SOURCE_ROOT; };
 		AB85E35A26FCAA3100ECEFE4 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		AB85E35E26FDEB7800ECEFE4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AB85E36026FDF45C00ECEFE4 /* Modes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modes.swift; sourceTree = "<group>"; };
@@ -202,7 +202,6 @@
 		AB60686C264EA37E000EF7FD /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				AB606878264FC63D000EF7FD /* HintsControl.swift */,
 				AB606862264B324B000EF7FD /* Buttons.swift */,
 				AB606874264EBA22000EF7FD /* Labels.swift */,
 			);
@@ -230,12 +229,13 @@
 		AB85E35926FCA98300ECEFE4 /* Ingame */ = {
 			isa = PBXGroup;
 			children = (
+				AB85E36326FE0E4500ECEFE4 /* Hints */,
+				AB85E36226FE0E2B00ECEFE4 /* GameModes */,
 				AB1C77B426CBD58B0062155E /* GameStrategy */,
 				AB606867264C4E7C000EF7FD /* GameViewController.swift */,
 				AB606870264EA648000EF7FD /* Game.swift */,
 				AB606869264C7309000EF7FD /* GameSession.swift */,
 				AB85E35A26FCAA3100ECEFE4 /* GameView.swift */,
-				AB85E36026FDF45C00ECEFE4 /* Modes.swift */,
 			);
 			path = Ingame;
 			sourceTree = "<group>";
@@ -254,6 +254,22 @@
 				AB85E35E26FDEB7800ECEFE4 /* SettingsView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AB85E36226FE0E2B00ECEFE4 /* GameModes */ = {
+			isa = PBXGroup;
+			children = (
+				AB85E36026FDF45C00ECEFE4 /* Modes.swift */,
+			);
+			path = GameModes;
+			sourceTree = "<group>";
+		};
+		AB85E36326FE0E4500ECEFE4 /* Hints */ = {
+			isa = PBXGroup;
+			children = (
+				AB606878264FC63D000EF7FD /* HintsControl.swift */,
+			);
+			path = Hints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

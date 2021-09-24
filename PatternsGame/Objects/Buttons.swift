@@ -44,15 +44,15 @@ class AdditionalButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        commonInit()
+        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        commonInit()
+        setup()
     }
 
-    private func commonInit() {
+    private func setup() {
         self.layer.cornerRadius = self.layer.frame.height / 4
         self.backgroundColor = UIColor.systemGray5
         self.setTitleColor(UIColor.lightPurple, for: .normal)

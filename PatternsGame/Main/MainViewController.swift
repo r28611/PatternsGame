@@ -9,10 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     @IBAction func didTapResults(_ sender: UIButton) {
         let viewController = ResultsViewController()
         navigationController?.pushViewController(viewController, animated: true)
