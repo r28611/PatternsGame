@@ -8,8 +8,7 @@
 import UIKit
 
 protocol GameDelegate: AnyObject {
-    func didSetMaxLevel(maxLevel: Int)
-    func didNewLevel(with level: Int, money: Int)
+    func didNewLevel(with level: Int)
 }
 
 class GameViewController: UIViewController {
@@ -18,6 +17,7 @@ class GameViewController: UIViewController {
     weak var gameDelegate: GameDelegate?
     private let gameCaretacer = GameCaretaker()
     private var currentGameSession = GameSession()
+    
     private var questions = QuestionFactory.makeQuestions()
     private var currentQuestion: Question?
     private var level: Int = 0
@@ -32,7 +32,6 @@ class GameViewController: UIViewController {
         gameCaretacer.restoreState()
         Game.shared.gameSession = currentGameSession
         self.gameDelegate = currentGameSession
-        self.gameDelegate?.didSetMaxLevel(maxLevel: maxLevel)
         questions = gameStrategy?.defineQuestions(questions: questions) ?? questions
     }
     
@@ -117,7 +116,7 @@ class GameViewController: UIViewController {
         }
         
         level += 1
-        gameDelegate?.didNewLevel(with: level, money: 0)
+        gameDelegate?.didNewLevel(with: level)
         if level < maxLevel {
             setQuestionAndAnswerOptions(level: level)
         } else {

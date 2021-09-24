@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapMenu(_ sender: UIButton) {
-        let vc = MenuViewController()
+        let vc = SettingsViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 }

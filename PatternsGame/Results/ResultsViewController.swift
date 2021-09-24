@@ -19,7 +19,6 @@ class ResultsViewController: UIViewController {
 
     override func loadView() {
         view = tableView
-        tableView.separatorStyle = .none
     }
 }
 
@@ -30,11 +29,10 @@ extension ResultsViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         if indexPath.row == 0 {
-            cell.scoreLabel.text = "✅"
-            cell.scoreLabel.layer.borderColor = UIColor.white.cgColor
+            cell.scoreLabel.text = "Твой счет"
             return cell
         }
-        cell.scoreLabel.text = String(Game.shared.results[indexPath.row - 1].score) + "/" + String(Game.shared.results[indexPath.row - 1].questionCount)
+        cell.scoreLabel.text = String(Game.shared.results[indexPath.row - 1].score)
         return cell
     }
 

@@ -14,8 +14,11 @@ final class Game {
     private init() {
     }
     
-    var gameSession: GameSession?
-    var results = [GameSession]()
+    internal var results = [GameSession]()
+    internal var gameSession: GameSession?
+    internal var questions = QuestionFactory.makeQuestions()
+    
+    var mode = Mode.regular
     
     func addResult(_ result: GameSession) {
         self.results.append(result)

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB1C77B626CBD5CA0062155E /* GameStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C77B526CBD5CA0062155E /* GameStrategy.swift */; };
-		AB27C80726CFB7EE00AE5F72 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB27C80626CFB7EE00AE5F72 /* MenuVC.swift */; };
+		AB27C80726CFB7EE00AE5F72 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB27C80626CFB7EE00AE5F72 /* SettingsViewController.swift */; };
 		AB5443732655290700F6CC6C /* + UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5443722655290700F6CC6C /* + UIColor.swift */; };
 		AB606830264B3003000EF7FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB60682F264B3003000EF7FD /* AppDelegate.swift */; };
 		AB606832264B3003000EF7FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606831264B3003000EF7FD /* SceneDelegate.swift */; };
@@ -29,6 +29,8 @@
 		AB606877264EBB9D000EF7FD /* ResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606876264EBB9D000EF7FD /* ResultsCell.swift */; };
 		AB606879264FC63D000EF7FD /* HintsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606878264FC63D000EF7FD /* HintsControl.swift */; };
 		AB85E35B26FCAA3100ECEFE4 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E35A26FCAA3100ECEFE4 /* GameView.swift */; };
+		AB85E35F26FDEB7800ECEFE4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E35E26FDEB7800ECEFE4 /* SettingsView.swift */; };
+		AB85E36126FDF45C00ECEFE4 /* Modes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E36026FDF45C00ECEFE4 /* Modes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +52,7 @@
 
 /* Begin PBXFileReference section */
 		AB1C77B526CBD5CA0062155E /* GameStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStrategy.swift; sourceTree = "<group>"; };
-		AB27C80626CFB7EE00AE5F72 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		AB27C80626CFB7EE00AE5F72 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		AB5443722655290700F6CC6C /* + UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+ UIColor.swift"; sourceTree = "<group>"; };
 		AB60682C264B3003000EF7FD /* PatternsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB60682F264B3003000EF7FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,8 @@
 		AB606876264EBB9D000EF7FD /* ResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCell.swift; sourceTree = "<group>"; };
 		AB606878264FC63D000EF7FD /* HintsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HintsControl.swift; path = PatternsGame/Objects/HintsControl.swift; sourceTree = SOURCE_ROOT; };
 		AB85E35A26FCAA3100ECEFE4 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		AB85E35E26FDEB7800ECEFE4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AB85E36026FDF45C00ECEFE4 /* Modes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +116,13 @@
 			path = GameStrategy;
 			sourceTree = "<group>";
 		};
-		AB27C80526CFB7DC00AE5F72 /* Menu */ = {
+		AB27C80526CFB7DC00AE5F72 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				AB27C80626CFB7EE00AE5F72 /* MenuVC.swift */,
+				AB85E35D26FDEB3200ECEFE4 /* View */,
+				AB85E35C26FDEABB00ECEFE4 /* Controller */,
 			);
-			path = Menu;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		AB606823264B3003000EF7FD = {
@@ -144,7 +149,10 @@
 			isa = PBXGroup;
 			children = (
 				AB606840264B3007000EF7FD /* Info.plist */,
-				AB60686D264EA424000EF7FD /* Game */,
+				AB85E35926FCA98300ECEFE4 /* Ingame */,
+				AB27C80526CFB7DC00AE5F72 /* Settings */,
+				AB60686F264EA44B000EF7FD /* Results */,
+				AB60686E264EA433000EF7FD /* Main */,
 				AB60686C264EA37E000EF7FD /* Objects */,
 				AB60686B264EA359000EF7FD /* Fundamental */,
 				AB606864264BCF0B000EF7FD /* Model */,
@@ -201,17 +209,6 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
-		AB60686D264EA424000EF7FD /* Game */ = {
-			isa = PBXGroup;
-			children = (
-				AB85E35926FCA98300ECEFE4 /* Ingame */,
-				AB27C80526CFB7DC00AE5F72 /* Menu */,
-				AB60686F264EA44B000EF7FD /* Results */,
-				AB60686E264EA433000EF7FD /* Main */,
-			);
-			path = Game;
-			sourceTree = "<group>";
-		};
 		AB60686E264EA433000EF7FD /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,8 +235,25 @@
 				AB606870264EA648000EF7FD /* Game.swift */,
 				AB606869264C7309000EF7FD /* GameSession.swift */,
 				AB85E35A26FCAA3100ECEFE4 /* GameView.swift */,
+				AB85E36026FDF45C00ECEFE4 /* Modes.swift */,
 			);
 			path = Ingame;
+			sourceTree = "<group>";
+		};
+		AB85E35C26FDEABB00ECEFE4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AB27C80626CFB7EE00AE5F72 /* SettingsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AB85E35D26FDEB3200ECEFE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AB85E35E26FDEB7800ECEFE4 /* SettingsView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,15 +389,17 @@
 				AB606868264C4E7C000EF7FD /* GameViewController.swift in Sources */,
 				AB606871264EA648000EF7FD /* Game.swift in Sources */,
 				AB606877264EBB9D000EF7FD /* ResultsCell.swift in Sources */,
+				AB85E35F26FDEB7800ECEFE4 /* SettingsView.swift in Sources */,
 				AB60683A264B3003000EF7FD /* PatternsGame.xcdatamodeld in Sources */,
 				AB606873264EB7DD000EF7FD /* ResultsViewController.swift in Sources */,
 				AB85E35B26FCAA3100ECEFE4 /* GameView.swift in Sources */,
-				AB27C80726CFB7EE00AE5F72 /* MenuVC.swift in Sources */,
+				AB27C80726CFB7EE00AE5F72 /* SettingsViewController.swift in Sources */,
 				AB60686A264C7309000EF7FD /* GameSession.swift in Sources */,
 				AB5443732655290700F6CC6C /* + UIColor.swift in Sources */,
 				AB606834264B3003000EF7FD /* MainViewController.swift in Sources */,
 				AB606879264FC63D000EF7FD /* HintsControl.swift in Sources */,
 				AB606830264B3003000EF7FD /* AppDelegate.swift in Sources */,
+				AB85E36126FDF45C00ECEFE4 /* Modes.swift in Sources */,
 				AB606866264BCF1E000EF7FD /* Question.swift in Sources */,
 				AB606863264B324B000EF7FD /* Buttons.swift in Sources */,
 				AB606832264B3003000EF7FD /* SceneDelegate.swift in Sources */,
