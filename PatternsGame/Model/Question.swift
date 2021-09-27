@@ -12,8 +12,8 @@ struct Question {
     let answerOptions: [String]
     let rightAnswer: Int
     
-    func checkAnswer(userAnswer: String) -> Bool {
-        return userAnswer == answerOptions[rightAnswer]
+    func checkAnswer(userAnswer: Int) -> Bool {
+        return userAnswer == rightAnswer
     }
 }
 

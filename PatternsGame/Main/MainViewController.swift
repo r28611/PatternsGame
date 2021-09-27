@@ -16,8 +16,6 @@ class ViewController: UIViewController {
     
     @IBAction func didTapGame(_ sender: UIButton) {
         let vc = GameViewController()
-//        let mode = Mode(rawValue: difficultyControl.selectedSegmentIndex)
-//        vc.gameStrategy = mode == .normal ? NormalStrategy() : RandomStrategy()
         navigationController?.pushViewController(vc, animated: true)
     }
     

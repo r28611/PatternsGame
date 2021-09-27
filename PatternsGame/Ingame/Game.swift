@@ -14,17 +14,50 @@ final class Game {
     private init() {
     }
     
+    var gameStrategy: GameStrategy = Regular()
+    internal var level: Int = 0
     internal var results = [GameSession]()
-    internal var gameSession: GameSession?
-    internal var questions = QuestionFactory.makeQuestions()
+    internal var questions: [Question] = QuestionFactory.makeQuestions()
     
-    var mode = Mode.regular
+    private var gameSession: GameSession?
+    private let gameCaretacer = GameCaretaker()
     
     func addResult(_ result: GameSession) {
-        self.results.append(result)
+        results.append(result)
     }
     
     func clearResults() {
-        self.results = []
+        results = []
+    }
+    
+    func startGame() {
+        questions = gameStrategy.defineQuestions(questions: questions)
+        gameCaretacer.game = self
+        gameCaretacer.restoreState()
+        if let state = gameCaretacer.gameState {
+            level = state.obtainedLevel + 1
+        }
+    }
+    
+    func endGame() {
+        gameCaretacer.saveGame()
+        gameCaretacer.gameState = nil
+        if let session = gameSession {
+            addResult(session)
+        }
+        gameSession = nil
+    }
+    
+    func setQuestion(level: Int) -> Question {
+        return questions[level]
+    }
+    
+    func checkUserAnswer(buttonPressedIndex: Int) -> Bool {
+        return questions[level].checkAnswer(userAnswer: buttonPressedIndex)
+    }
+    
+    func nextQuestion() {
+        level += 1
     }
 }
+

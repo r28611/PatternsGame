@@ -16,12 +16,19 @@ class SettingsViewController: UIViewController {
         view = settingsView
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        Game.shared.startGame()
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
         if self.isMovingFromParent {
-            Game.shared.mode = settingsView.selectedMode
+            Game.shared.gameStrategy = settingsView.selectedStrategy ?? Regular()
         }
     }
+    
+    
 
 }

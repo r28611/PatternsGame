@@ -11,7 +11,7 @@ final class GameSession {
     
     var currentQuestionIndex: Int = 0
     var score: Int { return currentQuestionIndex * 3 }
-    var questionCount = Game.shared.questions
+    var questionCount = Game.shared.questions.count
     
 }
 

@@ -24,10 +24,10 @@ final class GameView: UIView {
         return control
     }()
     
-    private var buttonA : UIButton = createAnswerButton(title: "A")
-    private var buttonB : UIButton = createAnswerButton(title: "B")
-    private var buttonC : UIButton = createAnswerButton(title: "C")
-    private var buttonD : UIButton = createAnswerButton(title: "D")
+    var buttonA : UIButton = createAnswerButton(title: "A")
+    var buttonB : UIButton = createAnswerButton(title: "B")
+    var buttonC : UIButton = createAnswerButton(title: "C")
+    var buttonD : UIButton = createAnswerButton(title: "D")
     
     private lazy var buttonsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [buttonA, buttonB, buttonC, buttonD])
@@ -48,6 +48,13 @@ final class GameView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupLabels(for question: Question) {
+        questionLabel.text = question.question
+        [buttonA, buttonB, buttonC, buttonD].enumerated().forEach { (index, item) in
+            item.setTitle(question.answerOptions[index], for: .normal)
+        }
     }
     
     // MARK: - Private methods

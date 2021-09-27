@@ -9,10 +9,10 @@ import UIKit
 
 final class SettingsView: UIView {
     
-    var selectedMode = Mode.regular
+    var selectedStrategy: GameStrategy?
     
-    private var modeControl : UISegmentedControl = {
-        let control = UISegmentedControl(items: Mode.allCases.map { $0.rawValue })
+    private var strategyControl : UISegmentedControl = {
+        let control = UISegmentedControl(items: [Regular.strategyName, Random.strategyName])
         control.translatesAutoresizingMaskIntoConstraints = false
         control.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
         return control
@@ -33,14 +33,14 @@ final class SettingsView: UIView {
     
     private func configureView() {
         backgroundColor = .white
-        addSubview(modeControl)
+        addSubview(strategyControl)
         
         let margins = safeAreaLayoutGuide
         NSLayoutConstraint.activate([
-            modeControl.topAnchor.constraint(equalTo: margins.topAnchor),
-            modeControl.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
-            modeControl.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
-            modeControl.heightAnchor.constraint(equalToConstant: 50),
+            strategyControl.topAnchor.constraint(equalTo: margins.topAnchor),
+            strategyControl.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
+            strategyControl.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
+            strategyControl.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
     
@@ -48,10 +48,10 @@ final class SettingsView: UIView {
         switch sender.selectedSegmentIndex {
         case 0:
             backgroundColor = .yellow
-            selectedMode = Mode.regular
+            selectedStrategy = Regular()
         case 1:
             backgroundColor = .green
-            selectedMode = Mode.random
+            selectedStrategy = Random()
         default:
             backgroundColor = .red
         }

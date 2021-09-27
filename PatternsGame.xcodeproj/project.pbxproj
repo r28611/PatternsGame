@@ -30,7 +30,7 @@
 		AB606879264FC63D000EF7FD /* HintsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606878264FC63D000EF7FD /* HintsControl.swift */; };
 		AB85E35B26FCAA3100ECEFE4 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E35A26FCAA3100ECEFE4 /* GameView.swift */; };
 		AB85E35F26FDEB7800ECEFE4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E35E26FDEB7800ECEFE4 /* SettingsView.swift */; };
-		AB85E36126FDF45C00ECEFE4 /* Modes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E36026FDF45C00ECEFE4 /* Modes.swift */; };
+		AB85E36726FE273C00ECEFE4 /* Game + Memento.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E36626FE273C00ECEFE4 /* Game + Memento.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +80,7 @@
 		AB606878264FC63D000EF7FD /* HintsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HintsControl.swift; path = PatternsGame/Ingame/Hints/HintsControl.swift; sourceTree = SOURCE_ROOT; };
 		AB85E35A26FCAA3100ECEFE4 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		AB85E35E26FDEB7800ECEFE4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		AB85E36026FDF45C00ECEFE4 /* Modes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modes.swift; sourceTree = "<group>"; };
+		AB85E36626FE273C00ECEFE4 /* Game + Memento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game + Memento.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,10 +230,10 @@
 			isa = PBXGroup;
 			children = (
 				AB85E36326FE0E4500ECEFE4 /* Hints */,
-				AB85E36226FE0E2B00ECEFE4 /* GameModes */,
 				AB1C77B426CBD58B0062155E /* GameStrategy */,
 				AB606867264C4E7C000EF7FD /* GameViewController.swift */,
 				AB606870264EA648000EF7FD /* Game.swift */,
+				AB85E36626FE273C00ECEFE4 /* Game + Memento.swift */,
 				AB606869264C7309000EF7FD /* GameSession.swift */,
 				AB85E35A26FCAA3100ECEFE4 /* GameView.swift */,
 			);
@@ -254,14 +254,6 @@
 				AB85E35E26FDEB7800ECEFE4 /* SettingsView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		AB85E36226FE0E2B00ECEFE4 /* GameModes */ = {
-			isa = PBXGroup;
-			children = (
-				AB85E36026FDF45C00ECEFE4 /* Modes.swift */,
-			);
-			path = GameModes;
 			sourceTree = "<group>";
 		};
 		AB85E36326FE0E4500ECEFE4 /* Hints */ = {
@@ -403,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB606868264C4E7C000EF7FD /* GameViewController.swift in Sources */,
+				AB85E36726FE273C00ECEFE4 /* Game + Memento.swift in Sources */,
 				AB606871264EA648000EF7FD /* Game.swift in Sources */,
 				AB606877264EBB9D000EF7FD /* ResultsCell.swift in Sources */,
 				AB85E35F26FDEB7800ECEFE4 /* SettingsView.swift in Sources */,
@@ -415,7 +408,6 @@
 				AB606834264B3003000EF7FD /* MainViewController.swift in Sources */,
 				AB606879264FC63D000EF7FD /* HintsControl.swift in Sources */,
 				AB606830264B3003000EF7FD /* AppDelegate.swift in Sources */,
-				AB85E36126FDF45C00ECEFE4 /* Modes.swift in Sources */,
 				AB606866264BCF1E000EF7FD /* Question.swift in Sources */,
 				AB606863264B324B000EF7FD /* Buttons.swift in Sources */,
 				AB606832264B3003000EF7FD /* SceneDelegate.swift in Sources */,

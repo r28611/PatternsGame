@@ -11,14 +11,20 @@ protocol GameStrategy {
     func defineQuestions(questions: [Question]) -> [Question]
 }
 
-class NormalStrategy: GameStrategy {
+class Regular: GameStrategy {
     func defineQuestions(questions: [Question]) -> [Question] {
         return questions
     }
 }
 
-class RandomStrategy: GameStrategy {
+class Random: GameStrategy {
     func defineQuestions(questions: [Question]) -> [Question] {
         return questions.shuffled()
+    }
+}
+
+extension GameStrategy {
+    static var strategyName: String {
+        return String(describing: self)
     }
 }

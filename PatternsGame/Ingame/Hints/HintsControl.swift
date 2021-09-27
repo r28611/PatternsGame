@@ -103,4 +103,28 @@ class HintsControl: UIView {
         print("User took Call a friend hint")
     }
     
+    private func hallThink(question: Question) -> String {
+        let optionA = Int.random(in: 0...96)
+        let optionB = Int.random(in: 0...(100 - optionA))
+        let optionC = Int.random(in: 0...(100 - optionA - optionB))
+        let optionD = 100 - optionA - optionB - optionC
+        let thought: String = """
+            \(question.answerOptions[0])  ........ \(optionA)%
+            \(question.answerOptions[1])  ........ \(optionB)%
+            \(question.answerOptions[2])  ........ \(optionC)%
+            \(question.answerOptions[3])  ........ \(optionD)%
+        """
+        return thought
+    }
+    
+    func showHallHelp(question: Question, controller: UIViewController) {
+        let alert = UIAlertController(title: "Hall think that...",
+                                      message: hallThink(question: question),
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
+        controller.present(alert, animated: true, completion: nil)
+    }
+    
 }
