@@ -9,6 +9,13 @@ import UIKit
 
 final class GameView: UIView {
     
+    private var progress: UIProgressView = {
+        let view = UIProgressView()
+        view.tintColor = UIColor.lightPurple
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     private var questionLabel: UILabel = {
         let label = QuestionLabel()
         label.numberOfLines = 0
@@ -24,10 +31,10 @@ final class GameView: UIView {
         return control
     }()
     
-    var buttonA : UIButton = createAnswerButton(title: "A")
-    var buttonB : UIButton = createAnswerButton(title: "B")
-    var buttonC : UIButton = createAnswerButton(title: "C")
-    var buttonD : UIButton = createAnswerButton(title: "D")
+    var buttonA : UIButton = AnswerButton(buttonIndex: 0)
+    var buttonB : UIButton = AnswerButton(buttonIndex: 1)
+    var buttonC : UIButton = AnswerButton(buttonIndex: 2)
+    var buttonD : UIButton = AnswerButton(buttonIndex: 3)
     
     private lazy var buttonsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [buttonA, buttonB, buttonC, buttonD])
@@ -57,23 +64,35 @@ final class GameView: UIView {
         }
     }
     
+    @objc func userAnswerTapped(_ sender: AnswerButton) {
+        print(String(sender.index))
+        // надо добавить делегат view controller, не понимаю как
+        Game.shared.checkUserAnswer(buttonPressedIndex: sender.index) ? Game.shared.nextQuestion() : Game.shared.endGame()
+    }
+    
     // MARK: - Private methods
     
     private func configureUI() {
         backgroundColor = .white
+        addSubview(progress)
         addSubview(questionLabel)
         addSubview(hintsControl)
         addSubview(buttonsStackView)
         setupConstraints()
+        addButtonAction()
     }
     
     private func setupConstraints() {
         let margins = safeAreaLayoutGuide
         NSLayoutConstraint.activate([
-            questionLabel.topAnchor.constraint(equalTo: margins.topAnchor),
+            progress.topAnchor.constraint(equalTo: margins.topAnchor),
+            progress.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 8),
+            progress.trailingAnchor.constraint(equalTo: margins.trailingAnchor,  constant: -8),
+            progress.heightAnchor.constraint(equalToConstant: 8),
+            
+            questionLabel.topAnchor.constraint(equalTo: progress.bottomAnchor, constant: 48),
             questionLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
             questionLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
-            questionLabel.widthAnchor.constraint(equalTo: margins.widthAnchor),
             
             hintsControl.topAnchor.constraint(equalTo: questionLabel.bottomAnchor, constant: 48),
             hintsControl.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
@@ -85,5 +104,11 @@ final class GameView: UIView {
             buttonsStackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 8),
             buttonsStackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -8),
         ])
+    }
+    
+    private func addButtonAction() {
+        [buttonA, buttonB, buttonC, buttonD].forEach { button in
+            button.addTarget(self, action: #selector(userAnswerTapped(_:)), for: .touchUpInside)
+        }
     }
 }

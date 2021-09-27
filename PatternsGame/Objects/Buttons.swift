@@ -9,6 +9,8 @@ import UIKit
 
 class AnswerButton: UIButton {
     
+    var index: Int = 0
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -17,6 +19,11 @@ class AnswerButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
+    }
+    
+    convenience init(buttonIndex: Int) {
+        self.init()
+        index = buttonIndex
     }
     
     private func commonInit() {
@@ -31,13 +38,6 @@ class AnswerButton: UIButton {
         self.layer.cornerRadius = self.layer.frame.height / 4
     }
 
-}
-
-func createAnswerButton(title: String) -> AnswerButton {
-    let button = AnswerButton()
-    button.setTitle(title, for: .normal)
-    button.translatesAutoresizingMaskIntoConstraints = false
-    return button
 }
 
 class AdditionalButton: UIButton {

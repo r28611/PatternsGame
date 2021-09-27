@@ -30,6 +30,8 @@ class GameViewController: UIViewController {
         gameView.setupLabels(for: Game.shared.questions[Game.shared.level])
     }
     
+    // MARK: - Private methods
+    
     private func endGame() {
         Game.shared.endGame()
         navigationController?.popViewController(animated: true)
