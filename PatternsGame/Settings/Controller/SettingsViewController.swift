@@ -15,12 +15,7 @@ class SettingsViewController: UIViewController {
         super .viewDidLoad()
         view = settingsView
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        Game.shared.startGame()
-    }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 

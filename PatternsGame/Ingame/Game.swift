@@ -17,7 +17,7 @@ final class Game {
     var gameStrategy: GameStrategy = Regular()
     internal var level: Int = 0
     internal var results = [GameSession]()
-    internal var questions: [Question] = QuestionFactory.makeQuestions()
+    internal var questions = [Question]()
     
     private var gameSession: GameSession?
     private let gameCaretacer = GameCaretaker()

@@ -21,7 +21,12 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         view = gameView
         gameDelegate = currentGameSession
-        
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        Game.shared.startGame()
         gameView.setupLabels(for: Game.shared.questions[Game.shared.level])
     }
     
