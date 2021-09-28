@@ -7,7 +7,12 @@
 
 import UIKit
 
+protocol GameViewDelegate: AnyObject {
+    func didPressAnswer(_ sender: AnswerButton)
+}
+
 final class GameView: UIView {
+    weak var viewDelegate: GameViewDelegate?
     
     private var progress: UIProgressView = {
         let view = UIProgressView()
@@ -16,10 +21,17 @@ final class GameView: UIView {
         return view
     }()
     
+    private var questionNumberLabel: UILabel = {
+        let label = QuestionLabel()
+        label.numberOfLines = 0
+        label.textAlignment = .left
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private var questionLabel: UILabel = {
         let label = QuestionLabel()
         label.numberOfLines = 0
-        label.text = "Тут будет вопрос."
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -58,6 +70,7 @@ final class GameView: UIView {
     }
     
     func setupLabels(for question: Question) {
+        questionNumberLabel.text = "Вопрос №" + String(Game.shared.level + 1)
         questionLabel.text = question.question
         [buttonA, buttonB, buttonC, buttonD].enumerated().forEach { (index, item) in
             item.setTitle(question.answerOptions[index], for: .normal)
@@ -65,9 +78,7 @@ final class GameView: UIView {
     }
     
     @objc func userAnswerTapped(_ sender: AnswerButton) {
-        print(String(sender.index))
-        // надо добавить делегат view controller, не понимаю как
-        Game.shared.checkUserAnswer(buttonPressedIndex: sender.index) ? Game.shared.nextQuestion() : Game.shared.endGame()
+        self.viewDelegate?.didPressAnswer(sender)
     }
     
     // MARK: - Private methods
@@ -75,6 +86,7 @@ final class GameView: UIView {
     private func configureUI() {
         backgroundColor = .white
         addSubview(progress)
+        addSubview(questionNumberLabel)
         addSubview(questionLabel)
         addSubview(hintsControl)
         addSubview(buttonsStackView)
@@ -90,7 +102,11 @@ final class GameView: UIView {
             progress.trailingAnchor.constraint(equalTo: margins.trailingAnchor,  constant: -8),
             progress.heightAnchor.constraint(equalToConstant: 8),
             
-            questionLabel.topAnchor.constraint(equalTo: progress.bottomAnchor, constant: 48),
+            questionNumberLabel.topAnchor.constraint(equalTo: progress.bottomAnchor, constant: 16),
+            questionNumberLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
+            questionNumberLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
+            
+            questionLabel.topAnchor.constraint(equalTo: questionNumberLabel.bottomAnchor, constant: 16),
             questionLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
             questionLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
             

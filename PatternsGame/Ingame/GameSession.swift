@@ -9,16 +9,15 @@ import Foundation
 
 final class GameSession {
     
-    var currentQuestionIndex: Int = 0
-    var score: Int { return currentQuestionIndex * 3 }
+    var level: Int = 0
+    var score: Int { return level * 3 }
     var questionCount = Game.shared.questions.count
     
 }
 
 extension GameSession: GameDelegate {
-    
     func didNewLevel(with level: Int) {
-        self.currentQuestionIndex = level
+        self.level = level
     }
 }
 

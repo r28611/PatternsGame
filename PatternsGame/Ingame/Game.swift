@@ -13,13 +13,12 @@ final class Game {
     
     private init() {
     }
-    
+    var level: Int { return gameSession?.level ?? 0 }
     var gameStrategy: GameStrategy = Regular()
-    internal var level: Int = 0
     internal var results = [GameSession]()
     internal var questions = [Question]()
     
-    private var gameSession: GameSession?
+    internal var gameSession: GameSession?
     private let gameCaretacer = GameCaretaker()
     
     func addResult(_ result: GameSession) {
@@ -31,20 +30,21 @@ final class Game {
     }
     
     func startGame() {
+        gameSession = GameSession()
         questions = gameStrategy.defineQuestions(questions: questions)
-        gameCaretacer.game = self
-        gameCaretacer.restoreState()
-        if let state = gameCaretacer.gameState {
-            level = state.obtainedLevel + 1
-        }
+//        gameCaretacer.game = self
+//        gameCaretacer.restoreState()
+//        if let state = gameCaretacer.gameState {
+//            level = state.obtainedLevel + 1
+//        }
     }
     
     func endGame() {
-        gameCaretacer.saveGame()
-        gameCaretacer.gameState = nil
-        if let session = gameSession {
-            addResult(session)
-        }
+//        gameCaretacer.saveGame()
+//        gameCaretacer.gameState = nil
+//        if let session = gameSession {
+//            addResult(session)
+//        }
         gameSession = nil
     }
     
@@ -53,11 +53,23 @@ final class Game {
     }
     
     func checkUserAnswer(buttonPressedIndex: Int) -> Bool {
-        return questions[level].checkAnswer(userAnswer: buttonPressedIndex)
+        if let session = gameSession {
+            return questions[session.level].checkAnswer(userAnswer: buttonPressedIndex)
+        } else {
+            return false
+        }
     }
     
     func nextQuestion() {
-        level += 1
+        gameSession?.level += 1
+    }
+    
+    func isLastQuestion() -> Bool {
+        if let session = gameSession {
+            return session.level + 1 >= questions.count
+        } else {
+           return false
+        }
     }
 }
 

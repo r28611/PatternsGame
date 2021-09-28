@@ -12,17 +12,19 @@ import Foundation
 extension Game {
     
     func save() -> GameState {
-        return GameState(obtainedLevel: level)
+        return GameState(level: gameSession?.level ?? 0)
     }
     
     func restore(state: GameState?) {
-        level = state?.obtainedLevel ?? 0
+        if gameSession != nil {
+            gameSession?.level = state?.level ?? 0
+        }
     }
 }
 
 // Memento
 struct GameState: Codable {
-    let obtainedLevel: Int
+    let level: Int
 }
 
 
@@ -30,7 +32,6 @@ struct GameState: Codable {
 class GameCaretaker {
     
     weak var game: Game?
-    var gameState: GameState?
     
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
@@ -48,7 +49,8 @@ class GameCaretaker {
     func restoreState() {
         guard let data = UserDefaults.standard.data(forKey: key) else { return }
         do {
-            gameState = try self.decoder.decode(GameState.self, from: data)
+            let gameState = try self.decoder.decode(GameState.self, from: data)
+//            game.
         } catch {
             print(error)
         }

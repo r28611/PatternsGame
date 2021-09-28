@@ -12,7 +12,6 @@ protocol GameDelegate: AnyObject {
 }
 
 class GameViewController: UIViewController {
-    
     weak var gameDelegate: GameDelegate?
     private var currentGameSession = GameSession()
     private let gameView = GameView()
@@ -20,6 +19,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = gameView
+        gameView.viewDelegate = self
         gameDelegate = currentGameSession
     }
     
@@ -30,6 +30,14 @@ class GameViewController: UIViewController {
         gameView.setupLabels(for: Game.shared.questions[Game.shared.level])
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        if self.isMovingFromParent {
+            Game.shared.endGame()
+        }
+    }
+    
     // MARK: - Private methods
     
     private func endGame() {
@@ -37,6 +45,14 @@ class GameViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    func userChooseAnswer(_ sender: AnswerButton) {
+    private func nextQuestion() {
+        Game.shared.nextQuestion()
+        gameView.setupLabels(for: Game.shared.questions[Game.shared.level])
+    }
+}
+
+extension GameViewController: GameViewDelegate {
+    func didPressAnswer(_ sender: AnswerButton) {
+        Game.shared.checkUserAnswer(buttonPressedIndex: sender.index) && !Game.shared.isLastQuestion() ? nextQuestion() : endGame()
     }
 }
