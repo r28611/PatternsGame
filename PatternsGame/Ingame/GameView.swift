@@ -14,7 +14,7 @@ protocol GameViewDelegate: AnyObject {
 final class GameView: UIView {
     weak var viewDelegate: GameViewDelegate?
     
-    private var progress: UIProgressView = {
+    var progress: UIProgressView = {
         let view = UIProgressView()
         view.tintColor = UIColor.lightPurple
         view.translatesAutoresizingMaskIntoConstraints = false

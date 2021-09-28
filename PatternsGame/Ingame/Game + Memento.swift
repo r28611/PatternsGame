@@ -12,12 +12,12 @@ import Foundation
 extension Game {
     
     func save() -> GameState {
-        return GameState(level: gameSession?.level ?? 0)
+        return GameState(level: gameSession?.level.value ?? 0)
     }
     
     func restore(state: GameState?) {
         if gameSession != nil {
-            gameSession?.level = state?.level ?? 0
+            gameSession?.level.value = state?.level ?? 0
         }
     }
 }

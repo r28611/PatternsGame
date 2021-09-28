@@ -31,6 +31,7 @@
 		AB85E35B26FCAA3100ECEFE4 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E35A26FCAA3100ECEFE4 /* GameView.swift */; };
 		AB85E35F26FDEB7800ECEFE4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E35E26FDEB7800ECEFE4 /* SettingsView.swift */; };
 		AB85E36726FE273C00ECEFE4 /* Game + Memento.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E36626FE273C00ECEFE4 /* Game + Memento.swift */; };
+		AB85E36A27035C0E00ECEFE4 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E36927035C0E00ECEFE4 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		AB85E35A26FCAA3100ECEFE4 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		AB85E35E26FDEB7800ECEFE4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AB85E36626FE273C00ECEFE4 /* Game + Memento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game + Memento.swift"; sourceTree = "<group>"; };
+		AB85E36927035C0E00ECEFE4 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 		AB85E35926FCA98300ECEFE4 /* Ingame */ = {
 			isa = PBXGroup;
 			children = (
+				AB85E36827035BFC00ECEFE4 /* Helpers */,
 				AB85E36326FE0E4500ECEFE4 /* Hints */,
 				AB1C77B426CBD58B0062155E /* GameStrategy */,
 				AB606867264C4E7C000EF7FD /* GameViewController.swift */,
@@ -262,6 +265,14 @@
 				AB606878264FC63D000EF7FD /* HintsControl.swift */,
 			);
 			path = Hints;
+			sourceTree = "<group>";
+		};
+		AB85E36827035BFC00ECEFE4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AB85E36927035C0E00ECEFE4 /* Observable.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,6 +421,7 @@
 				AB606830264B3003000EF7FD /* AppDelegate.swift in Sources */,
 				AB606866264BCF1E000EF7FD /* Question.swift in Sources */,
 				AB606863264B324B000EF7FD /* Buttons.swift in Sources */,
+				AB85E36A27035C0E00ECEFE4 /* Observable.swift in Sources */,
 				AB606832264B3003000EF7FD /* SceneDelegate.swift in Sources */,
 				AB606875264EBA22000EF7FD /* Labels.swift in Sources */,
 				AB1C77B626CBD5CA0062155E /* GameStrategy.swift in Sources */,

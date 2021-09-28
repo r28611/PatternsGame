@@ -13,7 +13,7 @@ final class Game {
     
     private init() {
     }
-    var level: Int { return gameSession?.level ?? 0 }
+    var level: Int { return gameSession?.level.value ?? 0 }
     var gameStrategy: GameStrategy = Regular()
     internal var results = [GameSession]()
     internal var questions = [Question]()
@@ -54,22 +54,23 @@ final class Game {
     
     func checkUserAnswer(buttonPressedIndex: Int) -> Bool {
         if let session = gameSession {
-            return questions[session.level].checkAnswer(userAnswer: buttonPressedIndex)
+            return questions[session.level.value].checkAnswer(userAnswer: buttonPressedIndex)
         } else {
             return false
         }
     }
     
     func nextQuestion() {
-        gameSession?.level += 1
+        gameSession?.level.value += 1
     }
     
     func isLastQuestion() -> Bool {
         if let session = gameSession {
-            return session.level + 1 >= questions.count
+            return session.level.value + 1 >= questions.count
         } else {
            return false
         }
     }
+
 }
 

@@ -28,6 +28,9 @@ class GameViewController: UIViewController {
         super.viewWillAppear(animated)
         Game.shared.startGame()
         gameView.setupLabels(for: Game.shared.questions[Game.shared.level])
+        Game.shared.gameSession?.level.addObserver(self, options: [.new, .initial], closure: { [weak self] (level, _) in
+            self?.gameView.progress.setProgress((Float(level) / Float(Game.shared.questions.count)), animated: true)
+        })
     }
     
     override func viewWillDisappear(_ animated: Bool) {
