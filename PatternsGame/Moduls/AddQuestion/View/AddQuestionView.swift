@@ -63,19 +63,11 @@ final class AddQuestionView: UIView {
         let safeArea = safeAreaLayoutGuide
         
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(
-                equalTo: safeArea.topAnchor
-            ),
-            tableView.leadingAnchor.constraint(
-                equalTo: safeArea.leadingAnchor
-            ),
-            tableView.trailingAnchor.constraint(
-                equalTo: safeArea.trailingAnchor
-            ),
-            tableView.bottomAnchor.constraint(
-                equalTo: safeArea.bottomAnchor,
-                constant: -50
-            )
+            tableView.topAnchor.constraint(equalTo: safeArea.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor,
+                                              constant: -50)
         ])
     }
     
@@ -93,13 +85,21 @@ final class AddQuestionView: UIView {
     
     private func setupButtonsAction() {
         addCellButton.addTarget(self, action: #selector(addCell(_:)), for: .touchUpInside)
+        saveButton.addTarget(self, action: #selector(saveQuestions(_:)), for: .touchUpInside)
     }
     
     @objc private func addCell(_ sender: UIButton) {
-        cellCount += 1
-        tableView.beginUpdates()
-        tableView.insertRows(at: [IndexPath(row: cellCount - 1, section: 0)], with: .automatic)
-        tableView.endUpdates()
+        if let cell = tableView.cellForRow(at: IndexPath(row: cellCount - 1, section: 0)) as? AddQuestionCell,
+           !cell.isTextFieldsEmpty() {
+            cellCount += 1
+            tableView.beginUpdates()
+            tableView.insertRows(at: [IndexPath(row: cellCount - 1, section: 0)], with: .automatic)
+            tableView.endUpdates()
+        }
+    }
+    
+    @objc private func saveQuestions(_ sender: UIButton) {
+        
     }
 }
 

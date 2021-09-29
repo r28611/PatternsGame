@@ -57,4 +57,16 @@ final class AddQuestionCell: UITableViewCell {
                                                        constant: -8)
         ])
     }
+    
+    func isTextFieldsEmpty() -> Bool {
+        if let q = addQuesionCellView.questionTextField.text, q.count > 0,
+           let a = addQuesionCellView.answerATextField.text, a.count > 0,
+           let b = addQuesionCellView.answerBTextField.text, b.count > 0,
+           let c = addQuesionCellView.answerCTextField.text, c.count > 0,
+           let d = addQuesionCellView.answerDTextField.text, d.count > 0 {
+            return false
+        } else {
+            return true
+        }
+    }
 }

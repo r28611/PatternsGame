@@ -11,7 +11,7 @@ final class AddQuestionCellView: UIView {
     
     // MARK: - Private Properties
 
-    private let questionTextField: UITextField = {
+    internal let questionTextField: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
         field.layer.borderColor = UIColor.lightGray.cgColor
@@ -21,7 +21,7 @@ final class AddQuestionCellView: UIView {
         return field
     }()
     
-    private let answerATextField: UITextField = {
+    internal let answerATextField: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
         field.layer.borderColor = UIColor.lightGray.cgColor
@@ -30,7 +30,7 @@ final class AddQuestionCellView: UIView {
         return field
     }()
     
-    private let answerBTextField: UITextField = {
+    internal let answerBTextField: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
         field.layer.borderColor = UIColor.lightGray.cgColor
@@ -39,7 +39,7 @@ final class AddQuestionCellView: UIView {
         return field
     }()
     
-    private let answerCTextField: UITextField = {
+    internal let answerCTextField: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
         field.layer.borderColor = UIColor.lightGray.cgColor
@@ -48,7 +48,7 @@ final class AddQuestionCellView: UIView {
         return field
     }()
     
-    private let answerDTextField: UITextField = {
+    internal let answerDTextField: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
         field.layer.borderColor = UIColor.lightGray.cgColor
