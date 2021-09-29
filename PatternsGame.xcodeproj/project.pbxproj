@@ -37,6 +37,7 @@
 		ABD9EADE2703AD3F0027F5C9 /* AddQuestionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD9EADD2703AD3F0027F5C9 /* AddQuestionCellView.swift */; };
 		ABD9EAE027046BF20027F5C9 /* AddQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD9EADF27046BF20027F5C9 /* AddQuestionCell.swift */; };
 		ABD9EAE227048FCD0027F5C9 /* AddQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD9EAE127048FCD0027F5C9 /* AddQuestionView.swift */; };
+		ABD9EAE42704BA0D0027F5C9 /* QuestionsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD9EAE32704BA0D0027F5C9 /* QuestionsBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		ABD9EADD2703AD3F0027F5C9 /* AddQuestionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionCellView.swift; sourceTree = "<group>"; };
 		ABD9EADF27046BF20027F5C9 /* AddQuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionCell.swift; sourceTree = "<group>"; };
 		ABD9EAE127048FCD0027F5C9 /* AddQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionView.swift; sourceTree = "<group>"; };
+		ABD9EAE32704BA0D0027F5C9 /* QuestionsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				AB85E36927035C0E00ECEFE4 /* Observable.swift */,
+				ABD9EAE32704BA0D0027F5C9 /* QuestionsBuilder.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				AB60683A264B3003000EF7FD /* PatternsGame.xcdatamodeld in Sources */,
 				AB606873264EB7DD000EF7FD /* ResultsViewController.swift in Sources */,
 				AB85E35B26FCAA3100ECEFE4 /* GameView.swift in Sources */,
+				ABD9EAE42704BA0D0027F5C9 /* QuestionsBuilder.swift in Sources */,
 				ABD9EADE2703AD3F0027F5C9 /* AddQuestionCellView.swift in Sources */,
 				AB27C80726CFB7EE00AE5F72 /* SettingsViewController.swift in Sources */,
 				AB60686A264C7309000EF7FD /* GameSession.swift in Sources */,
