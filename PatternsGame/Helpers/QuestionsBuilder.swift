@@ -31,9 +31,4 @@ class QuestionsBuilder {
         answerOptions.append(answer)
         return self
     }
-    
-    func setRightAnswer(_ index: Int) -> Self{
-        self.rightAnswer = index
-        return self
-    }
 }

@@ -7,9 +7,14 @@
 
 import UIKit
 
+protocol AddQuestionViewDelegate: AnyObject {
+    func didPressSave(_ sender: UIButton)
+}
+
 final class AddQuestionView: UIView {
     
-    var questionsList = [Question]()
+    weak var viewDelegate: AddQuestionViewDelegate?
+    
     private var cellCount = 1
     
     // MARK: - Private properties
@@ -99,7 +104,25 @@ final class AddQuestionView: UIView {
     }
     
     @objc private func saveQuestions(_ sender: UIButton) {
-        
+        for index in 0...cellCount {
+            if let question = makeQuestion(from: index) {
+                questionsList.append(question)
+            }
+        }
+        self.viewDelegate?.didPressSave(sender)
+    }
+    
+    private func makeQuestion(from cell: Int) -> Question? {
+        if let cell = tableView.cellForRow(at: IndexPath(row: cell, section: 0)) as? AddQuestionCell,
+           !cell.isTextFieldsEmpty() {
+            return QuestionsBuilder().setQuestion(cell.addQuesionCellView.questionTextField.text!)
+                .addAnswer(cell.addQuesionCellView.answerATextField.text!)
+                .addAnswer(cell.addQuesionCellView.answerBTextField.text!)
+                .addAnswer(cell.addQuesionCellView.answerCTextField.text!)
+                .addAnswer(cell.addQuesionCellView.answerDTextField.text!)
+                .build()
+        }
+        return nil
     }
 }
 

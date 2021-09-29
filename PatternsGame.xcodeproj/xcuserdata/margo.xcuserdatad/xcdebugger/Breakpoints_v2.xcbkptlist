@@ -222,8 +222,8 @@
             filePath = "PatternsGame/Moduls/AddQuestion/View/AddQuestionView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "setupButtonsAction()"
             landmarkType = "7">
          </BreakpointContent>

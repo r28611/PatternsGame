@@ -13,10 +13,3 @@ final class GameSession {
     var score: Int { return level.value * 3 }
     
 }
-
-extension GameSession: GameDelegate {
-    func didNewLevel(with level: Int) {
-        self.level.value = level
-    }
-}
-

@@ -14,8 +14,15 @@ final class AddQuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = addQuestionView
+        addQuestionView.viewDelegate = self
+    }
+    
+}
+
+extension AddQuestionViewController: AddQuestionViewDelegate {
+    func didPressSave(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
     
     
 }
-

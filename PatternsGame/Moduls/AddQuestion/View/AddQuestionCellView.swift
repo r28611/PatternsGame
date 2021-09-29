@@ -94,20 +94,16 @@ final class AddQuestionCellView: UIView {
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(
                 equalTo: safeArea.topAnchor,
-                constant: 8
-            ),
+                constant: 8),
             stackView.leadingAnchor.constraint(
                 equalTo: safeArea.leadingAnchor,
-                constant: 16
-            ),
+                constant: 16),
             stackView.trailingAnchor.constraint(
                 equalTo: safeArea.trailingAnchor,
-                constant: -16
-            ),
+                constant: -16),
             stackView.bottomAnchor.constraint(
                 equalTo: safeArea.bottomAnchor,
-                constant: -8
-            )
+                constant: -8)
         ])
     }
     

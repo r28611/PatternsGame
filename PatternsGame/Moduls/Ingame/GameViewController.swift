@@ -7,12 +7,8 @@
 
 import UIKit
 
-protocol GameDelegate: AnyObject {
-    func didNewLevel(with level: Int)
-}
-
 class GameViewController: UIViewController {
-    weak var gameDelegate: GameDelegate?
+    
     private var currentGameSession = GameSession()
     private let gameView = GameView()
     
@@ -20,9 +16,7 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         view = gameView
         gameView.viewDelegate = self
-        gameDelegate = currentGameSession
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

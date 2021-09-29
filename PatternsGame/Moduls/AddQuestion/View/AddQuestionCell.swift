@@ -11,7 +11,7 @@ final class AddQuestionCell: UITableViewCell {
     
     // MARK: - Private Properties
     
-    private lazy var addQuesionCellView: AddQuestionCellView = {
+    internal lazy var addQuesionCellView: AddQuestionCellView = {
         let view = AddQuestionCellView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
