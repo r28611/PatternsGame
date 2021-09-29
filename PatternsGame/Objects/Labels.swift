@@ -48,28 +48,12 @@ class QuestionLabel: UILabel {
     }
 }
 
-class ScoreLabel: UILabel {
-
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)!
-        self.commonInit()
-
-    }
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.commonInit()
-    }
-    func commonInit(){
-        self.layer.cornerRadius = self.frame.height / 2
-        self.clipsToBounds = true
-        self.textColor = UIColor.lightPurple
-        self.font = UIFont(name: "Chalkduster", size: 16)
-        self.textAlignment = .center
-        self.setProperties(borderWidth: 1.0, borderColor:UIColor.systemGray5)
-    }
-    func setProperties(borderWidth: Float, borderColor: UIColor) {
-        self.layer.borderWidth = CGFloat(borderWidth)
-        self.layer.borderColor = borderColor.cgColor
+class TitleLabel: UILabel {
+    convenience init(color: UIColor, size: CGFloat) {
+        self.init()
+        textColor = color
+        font = UIFont(name: "Chalkduster", size: size)
+        textAlignment = .center
+        translatesAutoresizingMaskIntoConstraints = false
     }
 }

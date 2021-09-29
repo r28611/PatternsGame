@@ -77,10 +77,6 @@ final class GameView: UIView {
         }
     }
     
-    @objc func userAnswerTapped(_ sender: AnswerButton) {
-        self.viewDelegate?.didPressAnswer(sender)
-    }
-    
     // MARK: - Private methods
     
     private func configureUI() {
@@ -126,5 +122,9 @@ final class GameView: UIView {
         [buttonA, buttonB, buttonC, buttonD].forEach { button in
             button.addTarget(self, action: #selector(userAnswerTapped(_:)), for: .touchUpInside)
         }
+    }
+    
+    @objc private func userAnswerTapped(_ sender: AnswerButton) {
+        self.viewDelegate?.didPressAnswer(sender)
     }
 }

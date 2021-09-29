@@ -13,6 +13,7 @@ final class SettingsView: UIView {
     
     private var strategyControl : UISegmentedControl = {
         let control = UISegmentedControl(items: [Regular.strategyName, Random.strategyName])
+        control.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Chalkduster", size: 16) as Any], for: .normal)
         control.translatesAutoresizingMaskIntoConstraints = false
         control.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
         return control

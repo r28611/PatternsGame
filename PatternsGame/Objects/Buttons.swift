@@ -7,6 +7,33 @@
 
 import UIKit
 
+final class MainButton: UIButton {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    convenience init(text: String) {
+        self.init()
+        setTitle(text, for: .normal)
+    }
+
+    private func setup() {
+        self.layer.cornerRadius = self.layer.frame.height / 4
+        self.backgroundColor = UIColor.lightPurple
+        self.setTitleColor(UIColor.white, for: .normal)
+        self.setTitleColor(UIColor.darkGray, for: .selected)
+        self.titleLabel?.font = UIFont(name: "Chalkduster", size: 20)
+        
+    }
+}
+
 class AnswerButton: UIButton {
     
     var index: Int = 0
@@ -50,6 +77,11 @@ class AdditionalButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
+    }
+    
+    convenience init(text: String) {
+        self.init()
+        setTitle(text, for: .normal)
     }
 
     private func setup() {
