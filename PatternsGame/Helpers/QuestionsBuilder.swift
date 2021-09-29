@@ -13,7 +13,7 @@ class QuestionsBuilder {
     private(set) var rightAnswer: Int = 0
     
     func build() -> Question {
-        let mixedQuestions = Array(Set(answerOptions))
+        let mixedQuestions = answerOptions.shuffled()
         for (index, answer) in mixedQuestions.enumerated() {
             if answer == answerOptions[rightAnswer] {
                 rightAnswer = index

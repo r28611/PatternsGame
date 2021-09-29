@@ -32,19 +32,16 @@ final class Game {
     func startGame() {
         gameSession = GameSession()
         questions = gameStrategy.defineQuestions(questions: questions)
-//        gameCaretacer.game = self
-//        gameCaretacer.restoreState()
-//        if let state = gameCaretacer.gameState {
-//            level = state.obtainedLevel + 1
-//        }
+        gameCaretacer.game = self
+        gameCaretacer.restoreState()
     }
     
     func endGame() {
-//        gameCaretacer.saveGame()
-//        gameCaretacer.gameState = nil
-//        if let session = gameSession {
-//            addResult(session)
-//        }
+        gameCaretacer.saveGame()
+        gameCaretacer.game = nil
+        if let session = gameSession {
+            addResult(session)
+        }
         gameSession = nil
     }
     

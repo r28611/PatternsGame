@@ -13,37 +13,33 @@ enum Hints {
 
 class HintsControl: UIView {
     
-    private var isFiftyActive: Bool = true
+    private var isFiftyFiftyActive: Bool = true
     private var isHallActive: Bool = true
     private var isCallActive: Bool = true
     
-    private var fiftyButton: UIButton = {
+    private var fiftyFiftyButton: UIButton = {
         let button = AdditionalButton()
         button.setImage(UIImage(systemName: "lightbulb.fill"), for: .normal)
-        button.addTarget(self, action: #selector(activateFifty), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    private var hallButton: UIButton = {
+    private var hallHelpButton: UIButton = {
         let button = AdditionalButton()
         button.setImage(UIImage(systemName: "person.3.fill"), for: .normal)
-        button.addTarget(self, action: #selector(activateHall), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    private var callButton: UIButton = {
+    private var callFriendButton: UIButton = {
         let button = AdditionalButton()
         button.setImage(UIImage(systemName: "phone.fill"), for: .normal)
-        button.addTarget(self, action: #selector(activateCall), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    
     private lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [fiftyButton, hallButton, callButton])
+        let stackView = UIStackView(arrangedSubviews: [fiftyFiftyButton, hallHelpButton, callFriendButton])
         stackView.axis = .horizontal
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
@@ -57,6 +53,7 @@ class HintsControl: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
+        addButtonsAction()
     }
     
     required init?(coder: NSCoder) {
@@ -81,26 +78,17 @@ class HintsControl: UIView {
         ])
     }
     
-    @objc func activateFifty() {
-        isFiftyActive = false
-        fiftyButton.isUserInteractionEnabled = false
-        fiftyButton.setImage(UIImage(systemName: "nosign"), for: .normal)
-        print("User took Fifty Fifty hint")
+    private func addButtonsAction() {
+        [fiftyFiftyButton, hallHelpButton, callFriendButton].forEach {
+            $0.addTarget(self, action: #selector(didHintPressed(_:)), for: .touchUpInside)
+        }
+    }
+    
+    @objc private func didHintPressed(_ sender: UIButton) {
+        sender.setImage(UIImage(systemName: "nosign"), for: .normal)
+        sender.isUserInteractionEnabled = false
+        print(sender.description)
 
-    }
-    
-    @objc func activateHall() {
-        isHallActive = false
-        hallButton.isUserInteractionEnabled = false
-        hallButton.setImage(UIImage(systemName: "nosign"), for: .normal)
-        print("User took Hall Help hint")
-    }
-    
-    @objc func activateCall() {
-        isCallActive = false
-        callButton.isUserInteractionEnabled = false
-        callButton.setImage(UIImage(systemName: "nosign"), for: .normal)
-        print("User took Call a friend hint")
     }
     
     private func hallThink(question: Question) -> String {

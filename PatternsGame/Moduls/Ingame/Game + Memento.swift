@@ -50,7 +50,7 @@ class GameCaretaker {
         guard let data = UserDefaults.standard.data(forKey: key) else { return }
         do {
             let gameState = try self.decoder.decode(GameState.self, from: data)
-//            game.
+            game?.restore(state: gameState)
         } catch {
             print(error)
         }
