@@ -65,6 +65,10 @@ class GameCaretaker {
         }
     }
     
+    func clearState() {
+        UserDefaults.standard.removeObject(forKey: key)
+    }
+    
     
     public enum Error: Swift.Error {
         case gameNotFound

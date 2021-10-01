@@ -22,18 +22,10 @@ final class Game {
     private init() {
         gameCaretaker.game = self
     }
-    
-    func addResult(_ result: GameSession) {
-        results.append(result)
-    }
-    
-    func clearResults() {
-        results = []
-    }
-    
+
     func startGame() {
-        gameSession = GameSession()
         questions = gameStrategy.defineQuestions(questions: questions)
+        gameSession = GameSession(questionsList: questions)
         gameCaretaker.restoreState()
     }
     
@@ -41,11 +33,13 @@ final class Game {
         if let session = gameSession {
             addResult(session)
         }
+        gameCaretaker.clearState()
         gameSession = nil
     }
     
     func holdGame() {
         gameCaretaker.saveGame()
+        gameSession = nil
     }
     
     func setQuestion(level: Int) -> Question {
@@ -55,9 +49,7 @@ final class Game {
     func checkUserAnswer(buttonPressedIndex: Int) -> Bool {
         if let session = gameSession {
             return questions[session.level.value].checkAnswer(userAnswer: buttonPressedIndex)
-        } else {
-            return false
-        }
+        } else { return false }
     }
     
     func nextQuestion() {
@@ -67,10 +59,16 @@ final class Game {
     func isLastQuestion() -> Bool {
         if let session = gameSession {
             return session.level.value + 1 >= questions.count
-        } else {
-           return false
-        }
+        } else { return false }
     }
 
+    func addResult(_ result: GameSession) {
+        results.append(result)
+    }
+    
+    func clearResults() {
+        results = []
+    }
+    
 }
 

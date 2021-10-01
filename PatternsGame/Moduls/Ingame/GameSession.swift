@@ -16,4 +16,9 @@ final class GameSession {
     var isHallHelpActive: Bool = true
     var isCallFriendActive: Bool = true
     
+    var questins = [Question]()
+    
+    init(questionsList: [Question]) {
+        self.questins = questionsList
+    }
 }

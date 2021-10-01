@@ -9,7 +9,6 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    private var currentGameSession = GameSession()
     let gameView = GameView()
     
     override func viewDidLoad() {
@@ -23,6 +22,7 @@ class GameViewController: UIViewController {
         super.viewWillAppear(animated)
         Game.shared.startGame()
         gameView.setupLabels(for: Game.shared.questions[Game.shared.level])
+        gameView.hintsControl.rebuildButtons()
         Game.shared.gameSession?.level.addObserver(self, options: [.new, .initial], closure: { [weak self] (level, _) in
             self?.gameView.progress.setProgress((Float(level) / Float(Game.shared.questions.count)), animated: true)
         })
