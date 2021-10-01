@@ -10,12 +10,13 @@ import UIKit
 class GameViewController: UIViewController {
     
     private var currentGameSession = GameSession()
-    private let gameView = GameView()
+    let gameView = GameView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view = gameView
         gameView.viewDelegate = self
+        gameView.hintsControl.gameViewController = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,7 +32,7 @@ class GameViewController: UIViewController {
         super.viewWillDisappear(animated)
 
         if self.isMovingFromParent {
-            Game.shared.endGame()
+            Game.shared.holdGame()
         }
     }
     
@@ -46,6 +47,7 @@ class GameViewController: UIViewController {
         Game.shared.nextQuestion()
         gameView.setupLabels(for: Game.shared.questions[Game.shared.level])
     }
+
 }
 
 extension GameViewController: GameViewDelegate {

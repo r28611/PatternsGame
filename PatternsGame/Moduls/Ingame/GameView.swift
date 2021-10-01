@@ -21,6 +21,12 @@ final class GameView: UIView {
         return view
     }()
     
+    let hintsControl: HintsControl = {
+       let control = HintsControl()
+        control.translatesAutoresizingMaskIntoConstraints = false
+        return control
+    }()
+    
     private var questionNumberLabel: UILabel = {
         let label = QuestionLabel()
         label.numberOfLines = 0
@@ -35,12 +41,6 @@ final class GameView: UIView {
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
-    }()
-    
-    private let hintsControl: UIView = {
-       let control = HintsControl()
-        control.translatesAutoresizingMaskIntoConstraints = false
-        return control
     }()
     
     var buttonA : UIButton = AnswerButton(buttonIndex: 0)

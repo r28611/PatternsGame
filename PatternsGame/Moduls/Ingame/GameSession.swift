@@ -12,4 +12,8 @@ final class GameSession {
     var level: Observable<Int> = Observable<Int>(0)
     var score: Int { return level.value * 3 }
     
+    var isFiftyFiftyActive: Bool = true
+    var isHallHelpActive: Bool = true
+    var isCallFriendActive: Bool = true
+    
 }

@@ -15,8 +15,22 @@ struct Question {
     func checkAnswer(userAnswer: Int) -> Bool {
         return userAnswer == rightAnswer
     }
+    
+    func fiftyFifty() -> Question {
+        var newAnswers = ["", "", "", ""]
+        var oldAnswers = answerOptions
+        newAnswers[rightAnswer] = answerOptions[rightAnswer]
+        oldAnswers.remove(at: rightAnswer)
+        let randomAnswer = oldAnswers[Int.random(in: 0..<oldAnswers.count)]
+        
+        for (i, _) in answerOptions.enumerated() {
+            if randomAnswer == answerOptions[i] {
+                newAnswers[i] = randomAnswer
+            }
+        }
+        return Question(question: question, answerOptions: newAnswers, rightAnswer: rightAnswer)
+    }
 }
-
 
 var questionsList: [Question] = [
     Question(

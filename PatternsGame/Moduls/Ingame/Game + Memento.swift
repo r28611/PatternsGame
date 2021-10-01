@@ -12,19 +12,28 @@ import Foundation
 extension Game {
     
     func save() -> GameState {
-        return GameState(level: gameSession?.level.value ?? 0)
+        return GameState(level: gameSession?.level.value ?? 0,
+                         isFiftyFiftyActive: gameSession?.isFiftyFiftyActive ?? true,
+                         isHallHelpActive: gameSession?.isHallHelpActive ?? true,
+                         isCallFriendActive: gameSession?.isCallFriendActive ?? true)
     }
     
     func restore(state: GameState?) {
         if gameSession != nil {
             gameSession?.level.value = state?.level ?? 0
+            gameSession?.isFiftyFiftyActive = state?.isFiftyFiftyActive ?? true
+            gameSession?.isHallHelpActive = state?.isHallHelpActive ?? true
+            gameSession?.isCallFriendActive = state?.isCallFriendActive ?? true
         }
     }
 }
 
-// Memento
+// 2. Memento
 struct GameState: Codable {
     let level: Int
+    let isFiftyFiftyActive: Bool
+    let isHallHelpActive: Bool
+    let isCallFriendActive: Bool
 }
 
 

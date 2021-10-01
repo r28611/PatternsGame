@@ -11,15 +11,17 @@ final class Game {
     
     static let shared = Game()
     
-    private init() {
-    }
     var level: Int { return gameSession?.level.value ?? 0 }
     var gameStrategy: GameStrategy = Regular()
     internal var results = [GameSession]()
     internal var questions = [Question]()
     
     internal var gameSession: GameSession?
-    private let gameCaretacer = GameCaretaker()
+    private let gameCaretaker = GameCaretaker()
+    
+    private init() {
+        gameCaretaker.game = self
+    }
     
     func addResult(_ result: GameSession) {
         results.append(result)
@@ -32,17 +34,18 @@ final class Game {
     func startGame() {
         gameSession = GameSession()
         questions = gameStrategy.defineQuestions(questions: questions)
-        gameCaretacer.game = self
-        gameCaretacer.restoreState()
+        gameCaretaker.restoreState()
     }
     
     func endGame() {
-        gameCaretacer.saveGame()
-        gameCaretacer.game = nil
         if let session = gameSession {
             addResult(session)
         }
         gameSession = nil
+    }
+    
+    func holdGame() {
+        gameCaretaker.saveGame()
     }
     
     func setQuestion(level: Int) -> Question {

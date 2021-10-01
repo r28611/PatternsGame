@@ -27,8 +27,13 @@ class QuestionsBuilder {
         return self
     }
 
-    func addAnswer(_ answer: String) -> Self {
-        answerOptions.append(answer)
+    func addAnswers(_ answers: [String]) -> Self {
+        answerOptions = answers
+        return self
+    }
+    
+    func setRightAnswer(_ index: Int) -> Self {
+        rightAnswer = index
         return self
     }
 }

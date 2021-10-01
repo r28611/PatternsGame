@@ -7,15 +7,9 @@
 
 import UIKit
 
-enum Hints {
-    case Fifty, Hall, Call
-}
-
 class HintsControl: UIView {
     
-    private var isFiftyFiftyActive: Bool = true
-    private var isHallActive: Bool = true
-    private var isCallActive: Bool = true
+    var gameViewController: GameViewController?
     
     private var fiftyFiftyButton: UIButton = {
         let button = AdditionalButton()
@@ -88,7 +82,24 @@ class HintsControl: UIView {
         sender.setImage(UIImage(systemName: "nosign"), for: .normal)
         sender.isUserInteractionEnabled = false
         print(sender.description)
-
+        switch sender {
+        case hallHelpButton:
+            showHallHelp(question: Game.shared.questions[Game.shared.level], controller: gameViewController)
+        case fiftyFiftyButton:
+            gameViewController?.gameView.setupLabels(for: Game.shared.questions[Game.shared.level].fiftyFifty())
+        default:
+            return
+        }
+    }
+    
+    private func showHallHelp(question: Question, controller: UIViewController?) {
+        let alert = UIAlertController(title: "Hall think that right answer is",
+                                      message: hallThink(question: question),
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
+        controller?.present(alert, animated: true, completion: nil)
     }
     
     private func hallThink(question: Question) -> String {
@@ -104,15 +115,4 @@ class HintsControl: UIView {
         """
         return thought
     }
-    
-    func showHallHelp(question: Question, controller: UIViewController) {
-        let alert = UIAlertController(title: "Hall think that...",
-                                      message: hallThink(question: question),
-                                      preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-            NSLog("The \"OK\" alert occured.")
-        }))
-        controller.present(alert, animated: true, completion: nil)
-    }
-    
 }

@@ -115,11 +115,14 @@ final class AddQuestionView: UIView {
     private func makeQuestion(from cell: Int) -> Question? {
         if let cell = tableView.cellForRow(at: IndexPath(row: cell, section: 0)) as? AddQuestionCell,
            !cell.isTextFieldsEmpty() {
-            return QuestionsBuilder().setQuestion(cell.addQuesionCellView.questionTextField.text!)
-                .addAnswer(cell.addQuesionCellView.answerATextField.text!)
-                .addAnswer(cell.addQuesionCellView.answerBTextField.text!)
-                .addAnswer(cell.addQuesionCellView.answerCTextField.text!)
-                .addAnswer(cell.addQuesionCellView.answerDTextField.text!)
+            return QuestionsBuilder()
+                .setQuestion(cell.addQuesionCellView.questionTextField.text!)
+                .addAnswers([
+                    cell.addQuesionCellView.answerATextField.text!,
+                    cell.addQuesionCellView.answerBTextField.text!,
+                    cell.addQuesionCellView.answerCTextField.text!,
+                    cell.addQuesionCellView.answerDTextField.text!
+                ])
                 .build()
         }
         return nil
