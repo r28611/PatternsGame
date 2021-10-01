@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB1C77B626CBD5CA0062155E /* GameStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C77B526CBD5CA0062155E /* GameStrategy.swift */; };
+		AB27C80726CFB7EE00AE5F72 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB27C80626CFB7EE00AE5F72 /* SettingsViewController.swift */; };
 		AB5443732655290700F6CC6C /* + UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5443722655290700F6CC6C /* + UIColor.swift */; };
 		AB606830264B3003000EF7FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB60682F264B3003000EF7FD /* AppDelegate.swift */; };
 		AB606832264B3003000EF7FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606831264B3003000EF7FD /* SceneDelegate.swift */; };
@@ -25,7 +27,17 @@
 		AB606873264EB7DD000EF7FD /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606872264EB7DD000EF7FD /* ResultsViewController.swift */; };
 		AB606875264EBA22000EF7FD /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606874264EBA22000EF7FD /* Labels.swift */; };
 		AB606877264EBB9D000EF7FD /* ResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606876264EBB9D000EF7FD /* ResultsCell.swift */; };
-		AB606879264FC63D000EF7FD /* HintsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606878264FC63D000EF7FD /* HintsControl.swift */; };
+		AB85E35B26FCAA3100ECEFE4 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E35A26FCAA3100ECEFE4 /* GameView.swift */; };
+		AB85E35F26FDEB7800ECEFE4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E35E26FDEB7800ECEFE4 /* SettingsView.swift */; };
+		AB85E36726FE273C00ECEFE4 /* Game + Memento.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E36626FE273C00ECEFE4 /* Game + Memento.swift */; };
+		AB85E36A27035C0E00ECEFE4 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E36927035C0E00ECEFE4 /* Observable.swift */; };
+		AB85E36E27036EB500ECEFE4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E36D27036EB500ECEFE4 /* MainView.swift */; };
+		AB85E3732703AB2400ECEFE4 /* AddQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E3722703AB2400ECEFE4 /* AddQuestionViewController.swift */; };
+		ABD9EADB2703AC6B0027F5C9 /* HintsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD9EADA2703AC6B0027F5C9 /* HintsControl.swift */; };
+		ABD9EADE2703AD3F0027F5C9 /* AddQuestionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD9EADD2703AD3F0027F5C9 /* AddQuestionCellView.swift */; };
+		ABD9EAE027046BF20027F5C9 /* AddQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD9EADF27046BF20027F5C9 /* AddQuestionCell.swift */; };
+		ABD9EAE227048FCD0027F5C9 /* AddQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD9EAE127048FCD0027F5C9 /* AddQuestionView.swift */; };
+		ABD9EAE42704BA0D0027F5C9 /* QuestionsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD9EAE32704BA0D0027F5C9 /* QuestionsBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB1C77B526CBD5CA0062155E /* GameStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStrategy.swift; sourceTree = "<group>"; };
+		AB27C80626CFB7EE00AE5F72 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		AB5443722655290700F6CC6C /* + UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+ UIColor.swift"; sourceTree = "<group>"; };
 		AB60682C264B3003000EF7FD /* PatternsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB60682F264B3003000EF7FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +84,17 @@
 		AB606872264EB7DD000EF7FD /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		AB606874264EBA22000EF7FD /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		AB606876264EBB9D000EF7FD /* ResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCell.swift; sourceTree = "<group>"; };
-		AB606878264FC63D000EF7FD /* HintsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HintsControl.swift; path = PatternsGame/Objects/HintsControl.swift; sourceTree = SOURCE_ROOT; };
+		AB85E35A26FCAA3100ECEFE4 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		AB85E35E26FDEB7800ECEFE4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AB85E36626FE273C00ECEFE4 /* Game + Memento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game + Memento.swift"; sourceTree = "<group>"; };
+		AB85E36927035C0E00ECEFE4 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		AB85E36D27036EB500ECEFE4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		AB85E3722703AB2400ECEFE4 /* AddQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionViewController.swift; sourceTree = "<group>"; };
+		ABD9EADA2703AC6B0027F5C9 /* HintsControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintsControl.swift; sourceTree = "<group>"; };
+		ABD9EADD2703AD3F0027F5C9 /* AddQuestionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionCellView.swift; sourceTree = "<group>"; };
+		ABD9EADF27046BF20027F5C9 /* AddQuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionCell.swift; sourceTree = "<group>"; };
+		ABD9EAE127048FCD0027F5C9 /* AddQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionView.swift; sourceTree = "<group>"; };
+		ABD9EAE32704BA0D0027F5C9 /* QuestionsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +122,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB1C77B426CBD58B0062155E /* GameStrategy */ = {
+			isa = PBXGroup;
+			children = (
+				AB1C77B526CBD5CA0062155E /* GameStrategy.swift */,
+			);
+			path = GameStrategy;
+			sourceTree = "<group>";
+		};
+		AB27C80526CFB7DC00AE5F72 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AB85E35D26FDEB3200ECEFE4 /* View */,
+				AB85E35C26FDEABB00ECEFE4 /* Controller */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		AB606823264B3003000EF7FD = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +162,9 @@
 		AB60682E264B3003000EF7FD /* PatternsGame */ = {
 			isa = PBXGroup;
 			children = (
+				AB85E36827035BFC00ECEFE4 /* Helpers */,
+				AB85E36F2703AACD00ECEFE4 /* Moduls */,
 				AB606840264B3007000EF7FD /* Info.plist */,
-				AB60686D264EA424000EF7FD /* Game */,
 				AB60686C264EA37E000EF7FD /* Objects */,
 				AB60686B264EA359000EF7FD /* Fundamental */,
 				AB606864264BCF0B000EF7FD /* Model */,
@@ -161,6 +203,7 @@
 		AB60686B264EA359000EF7FD /* Fundamental */ = {
 			isa = PBXGroup;
 			children = (
+				AB606835264B3003000EF7FD /* Main.storyboard */,
 				AB606831264B3003000EF7FD /* SceneDelegate.swift */,
 				AB60683D264B3007000EF7FD /* LaunchScreen.storyboard */,
 				AB606838264B3003000EF7FD /* PatternsGame.xcdatamodeld */,
@@ -172,30 +215,17 @@
 		AB60686C264EA37E000EF7FD /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				AB606878264FC63D000EF7FD /* HintsControl.swift */,
 				AB606862264B324B000EF7FD /* Buttons.swift */,
 				AB606874264EBA22000EF7FD /* Labels.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
 		};
-		AB60686D264EA424000EF7FD /* Game */ = {
-			isa = PBXGroup;
-			children = (
-				AB606835264B3003000EF7FD /* Main.storyboard */,
-				AB606867264C4E7C000EF7FD /* GameViewController.swift */,
-				AB606869264C7309000EF7FD /* GameSession.swift */,
-				AB60686F264EA44B000EF7FD /* Results */,
-				AB60686E264EA433000EF7FD /* Main */,
-				AB606870264EA648000EF7FD /* Game.swift */,
-			);
-			path = Game;
-			sourceTree = "<group>";
-		};
 		AB60686E264EA433000EF7FD /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				AB606833264B3003000EF7FD /* MainViewController.swift */,
+				AB85E36C27036E5A00ECEFE4 /* Controller */,
+				AB85E36B27036E4C00ECEFE4 /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -207,6 +237,108 @@
 				AB606876264EBB9D000EF7FD /* ResultsCell.swift */,
 			);
 			path = Results;
+			sourceTree = "<group>";
+		};
+		AB85E35926FCA98300ECEFE4 /* Ingame */ = {
+			isa = PBXGroup;
+			children = (
+				AB85E36326FE0E4500ECEFE4 /* Hints */,
+				AB1C77B426CBD58B0062155E /* GameStrategy */,
+				AB606867264C4E7C000EF7FD /* GameViewController.swift */,
+				AB606870264EA648000EF7FD /* Game.swift */,
+				AB85E36626FE273C00ECEFE4 /* Game + Memento.swift */,
+				AB606869264C7309000EF7FD /* GameSession.swift */,
+				AB85E35A26FCAA3100ECEFE4 /* GameView.swift */,
+			);
+			path = Ingame;
+			sourceTree = "<group>";
+		};
+		AB85E35C26FDEABB00ECEFE4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AB27C80626CFB7EE00AE5F72 /* SettingsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AB85E35D26FDEB3200ECEFE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AB85E35E26FDEB7800ECEFE4 /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AB85E36326FE0E4500ECEFE4 /* Hints */ = {
+			isa = PBXGroup;
+			children = (
+				ABD9EADA2703AC6B0027F5C9 /* HintsControl.swift */,
+			);
+			path = Hints;
+			sourceTree = "<group>";
+		};
+		AB85E36827035BFC00ECEFE4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AB85E36927035C0E00ECEFE4 /* Observable.swift */,
+				ABD9EAE32704BA0D0027F5C9 /* QuestionsBuilder.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AB85E36B27036E4C00ECEFE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AB85E36D27036EB500ECEFE4 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AB85E36C27036E5A00ECEFE4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AB606833264B3003000EF7FD /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AB85E36F2703AACD00ECEFE4 /* Moduls */ = {
+			isa = PBXGroup;
+			children = (
+				AB85E3702703AAEB00ECEFE4 /* AddQuestion */,
+				AB60686E264EA433000EF7FD /* Main */,
+				AB60686F264EA44B000EF7FD /* Results */,
+				AB27C80526CFB7DC00AE5F72 /* Settings */,
+				AB85E35926FCA98300ECEFE4 /* Ingame */,
+			);
+			path = Moduls;
+			sourceTree = "<group>";
+		};
+		AB85E3702703AAEB00ECEFE4 /* AddQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				ABD9EADC2703ACEB0027F5C9 /* View */,
+				AB85E3712703AB0000ECEFE4 /* Controller */,
+			);
+			path = AddQuestion;
+			sourceTree = "<group>";
+		};
+		AB85E3712703AB0000ECEFE4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AB85E3722703AB2400ECEFE4 /* AddQuestionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ABD9EADC2703ACEB0027F5C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABD9EADD2703AD3F0027F5C9 /* AddQuestionCellView.swift */,
+				ABD9EADF27046BF20027F5C9 /* AddQuestionCell.swift */,
+				ABD9EAE127048FCD0027F5C9 /* AddQuestionView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,19 +472,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB606868264C4E7C000EF7FD /* GameViewController.swift in Sources */,
+				ABD9EAE027046BF20027F5C9 /* AddQuestionCell.swift in Sources */,
+				AB85E36E27036EB500ECEFE4 /* MainView.swift in Sources */,
+				ABD9EAE227048FCD0027F5C9 /* AddQuestionView.swift in Sources */,
+				AB85E36726FE273C00ECEFE4 /* Game + Memento.swift in Sources */,
 				AB606871264EA648000EF7FD /* Game.swift in Sources */,
 				AB606877264EBB9D000EF7FD /* ResultsCell.swift in Sources */,
+				AB85E35F26FDEB7800ECEFE4 /* SettingsView.swift in Sources */,
 				AB60683A264B3003000EF7FD /* PatternsGame.xcdatamodeld in Sources */,
 				AB606873264EB7DD000EF7FD /* ResultsViewController.swift in Sources */,
+				AB85E35B26FCAA3100ECEFE4 /* GameView.swift in Sources */,
+				ABD9EAE42704BA0D0027F5C9 /* QuestionsBuilder.swift in Sources */,
+				ABD9EADE2703AD3F0027F5C9 /* AddQuestionCellView.swift in Sources */,
+				AB27C80726CFB7EE00AE5F72 /* SettingsViewController.swift in Sources */,
 				AB60686A264C7309000EF7FD /* GameSession.swift in Sources */,
 				AB5443732655290700F6CC6C /* + UIColor.swift in Sources */,
 				AB606834264B3003000EF7FD /* MainViewController.swift in Sources */,
-				AB606879264FC63D000EF7FD /* HintsControl.swift in Sources */,
 				AB606830264B3003000EF7FD /* AppDelegate.swift in Sources */,
+				ABD9EADB2703AC6B0027F5C9 /* HintsControl.swift in Sources */,
 				AB606866264BCF1E000EF7FD /* Question.swift in Sources */,
+				AB85E3732703AB2400ECEFE4 /* AddQuestionViewController.swift in Sources */,
 				AB606863264B324B000EF7FD /* Buttons.swift in Sources */,
+				AB85E36A27035C0E00ECEFE4 /* Observable.swift in Sources */,
 				AB606832264B3003000EF7FD /* SceneDelegate.swift in Sources */,
 				AB606875264EBA22000EF7FD /* Labels.swift in Sources */,
+				AB1C77B626CBD5CA0062155E /* GameStrategy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
