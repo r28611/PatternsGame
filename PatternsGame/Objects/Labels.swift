@@ -24,7 +24,7 @@ class QuestionLabel: UILabel {
         self.layer.cornerRadius = self.frame.height / 4
         self.clipsToBounds = true
         self.backgroundColor = UIColor.systemGray5
-        self.textColor = UIColor.lightPurple
+        self.textColor = Colors.background
         self.font = UIFont(name: "Chalkduster", size: 16)
     }
     

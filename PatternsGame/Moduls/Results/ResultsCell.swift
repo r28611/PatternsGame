@@ -8,7 +8,7 @@
 import UIKit
 
 final class ResultsCell: UITableViewCell {
-    var scoreLabel = TitleLabel(color: .lightPurple, size: 18)
+    var scoreLabel = TitleLabel(color: Colors.background, size: 18)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

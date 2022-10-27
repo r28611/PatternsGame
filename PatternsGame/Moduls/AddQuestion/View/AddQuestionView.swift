@@ -64,7 +64,7 @@ final class AddQuestionView: UIView {
     
     private func configureTableView() {
         addSubview(tableView)
-        tableView.backgroundColor = .lightPurple
+        tableView.backgroundColor = Colors.background
         let safeArea = safeAreaLayoutGuide
         
         NSLayoutConstraint.activate([
@@ -78,7 +78,7 @@ final class AddQuestionView: UIView {
     
     private func configureStackView() {
         addSubview(horizontalStackView)
-        horizontalStackView.backgroundColor = .lightPurple
+        horizontalStackView.backgroundColor = Colors.background
         let safeArea = safeAreaLayoutGuide
         NSLayoutConstraint.activate([
             horizontalStackView.topAnchor.constraint(equalTo: tableView.bottomAnchor),

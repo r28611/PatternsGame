@@ -25,16 +25,17 @@ final class MainButton: UIButton {
     }
 
     private func setup() {
-        self.layer.cornerRadius = self.layer.frame.height / 4
-        self.backgroundColor = UIColor.lightPurple
-        self.setTitleColor(UIColor.white, for: .normal)
-        self.setTitleColor(UIColor.darkGray, for: .selected)
+        self.backgroundColor = Colors.background
+        layer.borderColor = Colors.frame.cgColor
+        layer.borderWidth = 12
+        self.setTitleColor(Colors.text, for: .normal)
+        self.setTitleColor(Colors.darkGray, for: .selected)
         self.titleLabel?.font = UIFont(name: "Chalkduster", size: 20)
         
     }
 }
 
-class AnswerButton: UIButton {
+final class AnswerButton: UIButton {
     
     var index: Int = 0
     
@@ -54,20 +55,14 @@ class AnswerButton: UIButton {
     }
     
     private func commonInit() {
-        self.layer.cornerRadius = self.layer.frame.height / 4
-        self.backgroundColor = UIColor.lightPurple
-        self.setTitleColor(UIColor.white, for: .normal)
+        self.backgroundColor = Colors.background
+        self.setTitleColor(Colors.text, for: .normal)
         self.titleLabel?.font = UIFont(name: "Chalkduster", size: 24)
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        self.layer.cornerRadius = self.layer.frame.height / 4
     }
 
 }
 
-class AdditionalButton: UIButton {
+final class AdditionalButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -85,12 +80,11 @@ class AdditionalButton: UIButton {
     }
 
     private func setup() {
-        self.layer.cornerRadius = self.layer.frame.height / 4
         self.backgroundColor = UIColor.systemGray5
-        self.setTitleColor(UIColor.lightPurple, for: .normal)
-        self.setTitleColor(UIColor.darkGray, for: .selected)
+        self.setTitleColor(Colors.background, for: .normal)
+        self.setTitleColor(Colors.darkGray, for: .selected)
         self.titleLabel?.font = UIFont(name: "Chalkduster", size: 20)
-        self.tintColor = UIColor.lightPurple
+        self.tintColor = Colors.background
         
     }
 }

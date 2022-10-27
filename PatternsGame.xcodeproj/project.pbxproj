@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB1C77B626CBD5CA0062155E /* GameStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C77B526CBD5CA0062155E /* GameStrategy.swift */; };
 		AB27C80726CFB7EE00AE5F72 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB27C80626CFB7EE00AE5F72 /* SettingsViewController.swift */; };
-		AB5443732655290700F6CC6C /* + UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5443722655290700F6CC6C /* + UIColor.swift */; };
+		AB5443732655290700F6CC6C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5443722655290700F6CC6C /* Colors.swift */; };
 		AB606830264B3003000EF7FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB60682F264B3003000EF7FD /* AppDelegate.swift */; };
 		AB606832264B3003000EF7FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606831264B3003000EF7FD /* SceneDelegate.swift */; };
 		AB606834264B3003000EF7FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB606833264B3003000EF7FD /* MainViewController.swift */; };
@@ -33,6 +33,7 @@
 		AB85E36A27035C0E00ECEFE4 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E36927035C0E00ECEFE4 /* Observable.swift */; };
 		AB85E36E27036EB500ECEFE4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E36D27036EB500ECEFE4 /* MainView.swift */; };
 		AB85E3732703AB2400ECEFE4 /* AddQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E3722703AB2400ECEFE4 /* AddQuestionViewController.swift */; };
+		ABBE25DA290AD0AA00A3C006 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABBE25D9290AD0AA00A3C006 /* Colors.xcassets */; };
 		ABD9EADB2703AC6B0027F5C9 /* HintsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD9EADA2703AC6B0027F5C9 /* HintsControl.swift */; };
 		ABD9EADE2703AD3F0027F5C9 /* AddQuestionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD9EADD2703AD3F0027F5C9 /* AddQuestionCellView.swift */; };
 		ABD9EAE027046BF20027F5C9 /* AddQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD9EADF27046BF20027F5C9 /* AddQuestionCell.swift */; };
@@ -60,7 +61,7 @@
 /* Begin PBXFileReference section */
 		AB1C77B526CBD5CA0062155E /* GameStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStrategy.swift; sourceTree = "<group>"; };
 		AB27C80626CFB7EE00AE5F72 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		AB5443722655290700F6CC6C /* + UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+ UIColor.swift"; sourceTree = "<group>"; };
+		AB5443722655290700F6CC6C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		AB60682C264B3003000EF7FD /* PatternsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB60682F264B3003000EF7FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB606831264B3003000EF7FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		AB85E36927035C0E00ECEFE4 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		AB85E36D27036EB500ECEFE4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AB85E3722703AB2400ECEFE4 /* AddQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionViewController.swift; sourceTree = "<group>"; };
+		ABBE25D9290AD0AA00A3C006 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		ABD9EADA2703AC6B0027F5C9 /* HintsControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintsControl.swift; sourceTree = "<group>"; };
 		ABD9EADD2703AD3F0027F5C9 /* AddQuestionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionCellView.swift; sourceTree = "<group>"; };
 		ABD9EADF27046BF20027F5C9 /* AddQuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionCell.swift; sourceTree = "<group>"; };
@@ -169,7 +171,7 @@
 				AB60686B264EA359000EF7FD /* Fundamental */,
 				AB606864264BCF0B000EF7FD /* Model */,
 				AB60683B264B3006000EF7FD /* Assets.xcassets */,
-				AB5443722655290700F6CC6C /* + UIColor.swift */,
+				ABBE25D9290AD0AA00A3C006 /* Colors.xcassets */,
 			);
 			path = PatternsGame;
 			sourceTree = "<group>";
@@ -282,6 +284,7 @@
 			children = (
 				AB85E36927035C0E00ECEFE4 /* Observable.swift */,
 				ABD9EAE32704BA0D0027F5C9 /* QuestionsBuilder.swift */,
+				AB5443722655290700F6CC6C /* Colors.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB60683F264B3007000EF7FD /* LaunchScreen.storyboard in Resources */,
+				ABBE25DA290AD0AA00A3C006 /* Colors.xcassets in Resources */,
 				AB60683C264B3006000EF7FD /* Assets.xcassets in Resources */,
 				AB606837264B3003000EF7FD /* Main.storyboard in Resources */,
 			);
@@ -486,7 +490,7 @@
 				ABD9EADE2703AD3F0027F5C9 /* AddQuestionCellView.swift in Sources */,
 				AB27C80726CFB7EE00AE5F72 /* SettingsViewController.swift in Sources */,
 				AB60686A264C7309000EF7FD /* GameSession.swift in Sources */,
-				AB5443732655290700F6CC6C /* + UIColor.swift in Sources */,
+				AB5443732655290700F6CC6C /* Colors.swift in Sources */,
 				AB606834264B3003000EF7FD /* MainViewController.swift in Sources */,
 				AB606830264B3003000EF7FD /* AppDelegate.swift in Sources */,
 				ABD9EADB2703AC6B0027F5C9 /* HintsControl.swift in Sources */,
