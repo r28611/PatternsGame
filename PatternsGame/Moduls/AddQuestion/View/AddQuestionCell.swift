@@ -31,13 +31,13 @@ final class AddQuestionCell: UITableViewCell {
     // MARK: - Private Methods
     
     private func configureUI () {
-        backgroundColor = .lightPurple
+        backgroundColor = Colors.background
         configureContentView()
         configureMainView()
     }
     
     private func configureContentView () {
-        contentView.backgroundColor = .lightPurple
+        contentView.backgroundColor = Colors.background
     }
     
     private func configureMainView () {
